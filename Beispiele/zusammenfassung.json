@@ -1,0 +1,85 @@
+{
+  "simulation_start": "2026-01-02",
+  "simulation_end": "2027-12-31",
+  "anzahl_kunden": 10,
+  "anzahl_transaktionen": 4630,
+  "anzahl_buchungen": 4023,
+  "kontostande": {
+    "CH00007620000000000011": {
+      "name": "Anna Muster",
+      "kontostand": 121.82,
+      "kredit_stand": 0.0,
+      "status": "aktiv",
+      "anzahl_transaktionen": 531
+    },
+    "CH00007620000000000022": {
+      "name": "Beat Keller",
+      "kontostand": 126.95,
+      "kredit_stand": 0.0,
+      "status": "aktiv",
+      "anzahl_transaktionen": 517
+    },
+    "CH00007620000000000033": {
+      "name": "Claudia Brunner",
+      "kontostand": 296.29,
+      "kredit_stand": 0.0,
+      "status": "aktiv",
+      "anzahl_transaktionen": 558
+    },
+    "CH00007620000000000044": {
+      "name": "Daniel Frei",
+      "kontostand": 148.68,
+      "kredit_stand": 0.0,
+      "status": "aktiv",
+      "anzahl_transaktionen": 487
+    },
+    "CH00007620000000000055": {
+      "name": "Elena Widmer",
+      "kontostand": 1189.39,
+      "kredit_stand": 0.0,
+      "status": "aktiv",
+      "anzahl_transaktionen": 522
+    },
+    "CH00007620000000000066": {
+      "name": "Fabian Meier",
+      "kontostand": 257.62,
+      "kredit_stand": 0.0,
+      "status": "aktiv",
+      "anzahl_transaktionen": 511
+    },
+    "CH00007620000000000077": {
+      "name": "Gina Huber",
+      "kontostand": 415.86,
+      "kredit_stand": 0.0,
+      "status": "aktiv",
+      "anzahl_transaktionen": 539
+    },
+    "CH00007620000000000088": {
+      "name": "Hans Zimmermann",
+      "kontostand": 120.55,
+      "kredit_stand": 0.0,
+      "status": "aktiv",
+      "anzahl_transaktionen": 573
+    },
+    "CH00007620000000000099": {
+      "name": "Irene Schmid",
+      "kontostand": -462.74,
+      "kredit_stand": 0.0,
+      "status": "gesperrt",
+      "anzahl_transaktionen": 248
+    },
+    "CH00007620000000000100": {
+      "name": "Jan Bischof",
+      "kontostand": -635.19,
+      "kredit_stand": 0.0,
+      "status": "gesperrt",
+      "anzahl_transaktionen": 181
+    }
+  },
+  "bankkonten": {
+    "zentralbankkonto": -4419.06,
+    "verpflichtungskonto": 1579.23,
+    "kreditkonto_aktiva": 0.0,
+    "einnahmenkonto": -5998.29
+  }
+}

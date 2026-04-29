@@ -1,0 +1,1 @@
+# Interne Bankbuchführung (Aufgabe D)
