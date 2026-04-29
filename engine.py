@@ -1,98 +1,121 @@
 import json
 import os
 from datetime import datetime
+import konten
+import kredit
+import buchung
+import speicherung
 
-# Import der noch zu erstellenden Module
-# import konten
-# import kredit
-# import buchung
-# import speicherung
-
-def lade_transaktionen(dateipfad):
-    """Liest eine monatliche JSON-Datei ein."""
-    if not os.path.exists(dateipfad):
-        print(f"Datei {dateipfad} nicht gefunden.")
-        return []
-    with open(dateipfad, 'r', encoding='utf-8') as f:
-        return json.load(f)
-
-def gruppiere_nach_tag(transaktionen):
+def verarbeite_periodische_aufgaben(datum_str, bank_daten):
     """
-    Gruppiert Transaktionen eines Monats in Tages-Batches.
-    Nutzt das 'datum' der zeit-Transaktion oder extrahiert es aus dem zeitstempel.
+    Führt automatisierte Buchungen basierend auf dem Datum aus.
+    Wird nach den Einzahlungen des Tages angestossen.
     """
-    tage = {}
-    aktueller_tag = None
+    datum = datetime.strptime(datum_str, "%Y-%m-%d")
     
-    for tx in transaktionen:
-        # Wenn eine Zeit-Transaktion kommt, aktualisieren wir das Datum
-        if tx.get("typ") == "zeit":
-            aktueller_tag = tx.get("datum")
+    # IBANs laden, indem wir alle Kundenkonten kurz einlesen
+    alle_ibans = []
+    if os.path.exists("konten"):
+        for datei in os.listdir("konten"):
+            if datei.endswith(".json") and datei != "bankkonten.json":
+                try:
+                    with open(os.path.join("konten", datei), 'r', encoding='utf-8') as f:
+                        daten = json.load(f)
+                        if "konto_iban" in daten:
+                            alle_ibans.append(daten["konto_iban"])
+                except Exception:
+                    pass
+
+    for iban in alle_ibans:
+        # 1. Täglich: Strafzinsen bei gesperrten Konten
+        kredit.kredit_strafzinsen(iban, datum_str)
         
-        # Falls keine Zeit-Transaktion am Anfang steht, Zeitstempel nutzen
-        tag_key = aktueller_tag or tx["zeitstempel"][:10]
-        
-        if tag_key not in tage:
-            tage[tag_key] = []
-        tage[tag_key].append(tx)
-    return tage
-
-def verarbeite_tages_batch(tag, tx_liste):
-    """
-    Verarbeitet alle Transaktionen eines Tages in der festen 
-    Reihenfolge (a-f) gemäß Spezifikation 2.7
-    """
-    print(f"--- Verarbeite Tag: {tag} ---")
-    
-    # Definition der Prioritäten gemäß Abschnitt 2.7
-    prioritaet = {
-        "konto_eroeffnen": 1,
-        "ueberweisung_ein": 2,
-        "periodische_verarbeitung": 3, # Zinsen, Amortisation etc.
-        "kredit_antrag": 4,
-        "kredit_rueckzahl": 4,
-        "daten_aendern": 5,
-        "konto_schliessen": 5,
-        "ueberweisung_aus": 6
-    }
-
-    # 1. Periodische Verarbeitungen müssen durch die Zeit-Transaktion angestoßen werden,
-    # aber erst nach den Einzahlungen erfolgen.
-
-    # Sortierung der Liste basierend auf der Priorität
-    # Transaktionen ohne explizite Prio werden ans Ende sortiert
-    sortierte_tx = sorted(tx_liste, key=lambda x: prioritaet.get(x["typ"], 99))
-
-    for tx in sortierte_tx:
-        typ = tx["typ"]
-        
-        if typ == "zeit":
-            # Zeit-Transaktion stellt interne Uhr um
-            print(f"Systemzeit auf {tx['datum']} gestellt.")
-            # Hier würden später die periodischen Berechnungen folgen (Zinsen, etc.)
-            continue
+        # 2. Monatlich (am 1. des Monats): Kreditzinsen & Amortisation
+        if datum.day == 1:
+            # Reihenfolge beachten: erst Zinsen, dann Amortisation
+            kredit.kredit_zinsen_berechnen(iban, datum_str)
+            kredit.kredit_amortisation(iban, datum_str)
+            # Prüfung auf Abschreibung nach 6 Monaten ohne Zahlung
+            kredit.kredit_abschreibung_pruefen(iban, datum_str)
             
-        # Dispatch-Logik an die anderen Module
-        if typ == "konto_eroeffnen":
-            # konten.konto_eroeffnen(tx["kunde"])
-            pass
-        elif typ == "ueberweisung_ein":
-            # konten.einzahlung_verbuchen(tx["ziel_iban"], tx["betrag"])
-            pass
-        elif typ == "ueberweisung_aus":
-            # konten.ueberweisung_ausfuehren(tx["quell_iban"], tx["ziel_iban"], tx["betrag"])
-            pass
-        # ... weitere Typen entsprechend Tabelle 1
+        # 3. Quartalsweise: Kontoführungsgebühr CHF 25
+        # (Januar, April, Juli, Oktober)
+        if datum.day == 1 and datum.month in [1, 4, 7, 10]:
+            kunden_konto = speicherung.lade_konto(iban)
+            if kunden_konto:
+                kunden_konto["kontostand"] -= 25.0
+                kunden_konto["transaktionen"].append({
+                    "zeitstempel": datum_str + "T08:00:00Z",
+                    "typ": "kontogebuehr",
+                    "betrag": -25.0,
+                    "saldo_nachher": kunden_konto["kontostand"],
+                    "status": "ausgefuehrt"
+                })
+                buchung.verbuchen("Kontogebuehr", 25.0, zeitstempel=datum_str + "T08:00:00Z", referenz="Quartalsgebühr")
+                speicherung.speichere_konto(kunden_konto)
 
-def run_simulation(dateiliste):
-    """Hauptschleife über alle Monatsdateien."""
-    for datei in dateiliste:
-        alle_tx = lade_transaktionen(datei)
-        tages_batches = gruppiere_nach_tag(alle_tx)
+iban_zaehler_global = 1
+
+def verarbeite_tages_batch(tag_datum, tx_liste):
+    global iban_zaehler_global
+    """Verarbeitet den Tages-Batch in der korrekten Reihenfolge."""
+    
+    # a) Kontoeröffnungen
+    for tx in [t for t in tx_liste if t["typ"] == "konto_eroeffnen"]:
+        # zaehler wird global verwaltet
+        konten.konto_eroeffnen(tx["kunde"], iban_zaehler=iban_zaehler_global, zeitstempel=tx["zeitstempel"])
+        iban_zaehler_global += 1
+
+    # b) Alle Einzahlungen
+    for tx in [t for t in tx_liste if t["typ"] == "ueberweisung_ein"]:
+        konten.einzahlung_verbuchen(tx["ziel_iban"], tx["betrag"], tx["zeitstempel"], tx.get("referenz"))
+
+    # c) Periodische Verarbeitungen (Zinsen, Gebühren etc.)
+    verarbeite_periodische_aufgaben(tag_datum, {})
+
+    # d) Kreditanträge und Rückzahlungen
+    for tx in [t for t in tx_liste if t["typ"] == "kredit_antrag"]:
+        kredit.kredit_vergeben(tx["kunden_iban"], tx["betrag"], tx["zeitstempel"])
+    for tx in [t for t in tx_liste if t["typ"] == "kredit_rueckzahl"]:
+        # Logik für freiwillige Rückzahlung
+        pass
+
+    # e) Datenänderungen / Schliessungen
+    # (Logik hier implementieren)
+
+    # f) Alle Auszahlungen
+    for tx in [t for t in tx_liste if t["typ"] == "ueberweisung_aus"]:
+        konten.ueberweisung_ausfuehren(tx["quell_iban"], tx["ziel_iban"], tx["betrag"], tx["zeitstempel"], tx.get("referenz"))
+
+def main():
+    """Startet die Simulation für die bereitgestellten Testdaten."""
+    # Initialisierung
+    buchung.initialisiere_bank()
+    
+    # Alle Transaktionsdateien aus dem Ordner "transaktionen" laden und sortieren
+    transaktionen_ordner = "transaktionen"
+    if not os.path.exists(transaktionen_ordner):
+        return
+
+    dateien = sorted([f for f in os.listdir(transaktionen_ordner) if f.endswith(".json")])
+
+    for datei in dateien:
+        monats_datei = os.path.join(transaktionen_ordner, datei)
+        with open(monats_datei, 'r', encoding='utf-8') as f:
+            transaktionen = json.load(f)
+            
+        tages_batches = {}
+        aktuelles_datum = datei.replace(".json", "") + "-01" # Default falls kein Zeit-Tag existiert
         
-        # Sortierte Verarbeitung der Tage eines Monats
+        for tx in transaktionen:
+            if tx.get("typ") == "zeit":
+                aktuelles_datum = tx["datum"]
+            if aktuelles_datum not in tages_batches:
+                tages_batches[aktuelles_datum] = []
+            tages_batches[aktuelles_datum].append(tx)
+            
         for tag in sorted(tages_batches.keys()):
             verarbeite_tages_batch(tag, tages_batches[tag])
 
-# Beispielaufruf für deine Datei
-# run_simulation(["transaktionen/2026-01.json"])
+if __name__ == "__main__":
+    main()

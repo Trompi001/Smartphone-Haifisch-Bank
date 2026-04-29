@@ -1,3 +1,4 @@
+from datetime import datetime
 import speicherung
 import buchung
 
@@ -17,7 +18,7 @@ def generiere_iban(zaehler):
     # Formatierung für die Speicherung (ohne Leerzeichen für Dateinamen)
     return f"{land}{pruefziffer_bank}{clearing}{konto_nr}{letzte_stelle}"
 
-def konto_eroeffnen(kunde_daten, iban_zaehler):
+def konto_eroeffnen(kunde_daten, iban_zaehler, zeitstempel):
     """
     Legt ein neues Kundendokument an.
     Gibt die neu generierte IBAN zurück.
@@ -39,7 +40,7 @@ def konto_eroeffnen(kunde_daten, iban_zaehler):
     
     # Initiale Transaktion aufzeichnen
     eroeffnung_tx = {
-        "zeitstempel": datetime.now().isoformat(), # Platzhalter für Engine-Zeit
+        "zeitstempel": zeitstempel, # Platzhalter für Engine-Zeit
         "typ": "konto_eroeffnen",
         "betrag": 0.0,
         "saldo_nachher": 0.0,
@@ -71,7 +72,7 @@ def einzahlung_verbuchen(iban, betrag, zeitstempel, referenz="Einzahlung"):
     konto["transaktionen"].append(historie_eintrag)
     
     # Gegenbuchung im Buchungssystem
-    buchung.verbuchen("Einzahlung", betrag)
+    buchung.verbuchen("Einzahlung", betrag, zeitstempel=zeitstempel, referenz=referenz)
     
     speicherung.speichere_konto(konto)
     return True
@@ -113,7 +114,7 @@ def ueberweisung_ausfuehren(von_iban, nach_iban, betrag, zeitstempel, referenz):
     
     # Interne vs. Externe Buchung prüfen
     is_intern = nach_iban.startswith("CH0000762")
-    buchung.verbuchen("Auszahlung", betrag, intern=is_intern)
+    buchung.verbuchen("Auszahlung", betrag, intern=is_intern, zeitstempel=zeitstempel, referenz=referenz)
     
     speicherung.speichere_konto(konto)
     return True

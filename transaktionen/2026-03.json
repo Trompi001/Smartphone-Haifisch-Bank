@@ -1,0 +1,2077 @@
+[
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-02T08:00:00Z",
+    "datum": "2026-03-02"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-02T10:00:01Z",
+    "ziel_iban": "CH00007620000000000011",
+    "betrag": 5525,
+    "waehrung": "CHF",
+    "absender_iban": "GB29NWBK60161331926819",
+    "referenz": "Lohnzahlung March 2026"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-02T10:00:03Z",
+    "ziel_iban": "CH00007620000000000022",
+    "betrag": 4819,
+    "waehrung": "CHF",
+    "absender_iban": "GB29NWBK60161331926819",
+    "referenz": "Lohnzahlung March 2026"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-02T10:00:05Z",
+    "ziel_iban": "CH00007620000000000033",
+    "betrag": 6352,
+    "waehrung": "CHF",
+    "absender_iban": "FR7630006000011234567890189",
+    "referenz": "Lohnzahlung March 2026"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-02T10:00:07Z",
+    "ziel_iban": "CH00007620000000000044",
+    "betrag": 3632,
+    "waehrung": "CHF",
+    "absender_iban": "FR7630006000011234567890189",
+    "referenz": "Lohnzahlung March 2026"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-02T10:00:09Z",
+    "ziel_iban": "CH00007620000000000055",
+    "betrag": 6940,
+    "waehrung": "CHF",
+    "absender_iban": "GB29NWBK60161331926819",
+    "referenz": "Lohnzahlung March 2026"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-02T10:00:11Z",
+    "ziel_iban": "CH00007620000000000066",
+    "betrag": 4184,
+    "waehrung": "CHF",
+    "absender_iban": "GB29NWBK60161331926819",
+    "referenz": "Lohnzahlung March 2026"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-02T10:00:13Z",
+    "ziel_iban": "CH00007620000000000077",
+    "betrag": 5790,
+    "waehrung": "CHF",
+    "absender_iban": "DE89370400440532013000",
+    "referenz": "Lohnzahlung March 2026"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-02T10:00:15Z",
+    "ziel_iban": "CH00007620000000000088",
+    "betrag": 6632,
+    "waehrung": "CHF",
+    "absender_iban": "GB29NWBK60161331926819",
+    "referenz": "Lohnzahlung March 2026"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-02T10:00:17Z",
+    "ziel_iban": "CH00007620000000000099",
+    "betrag": 3002,
+    "waehrung": "CHF",
+    "absender_iban": "FR7630006000011234567890189",
+    "referenz": "Lohnzahlung March 2026"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-02T10:00:19Z",
+    "ziel_iban": "CH00007620000000000100",
+    "betrag": 1971,
+    "waehrung": "CHF",
+    "absender_iban": "IT60X0542811101000000123456",
+    "referenz": "Lohnzahlung March 2026"
+  },
+  {
+    "typ": "kredit_antrag",
+    "zeitstempel": "2026-03-02T10:00:29Z",
+    "kunden_iban": "CH00007620000000000055",
+    "betrag": 8000
+  },
+  {
+    "typ": "kredit_antrag",
+    "zeitstempel": "2026-03-02T10:00:34Z",
+    "kunden_iban": "CH00007620000000000099",
+    "betrag": 10000
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-02T10:00:39Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 527.83,
+    "waehrung": "CHF",
+    "referenz": "Miete"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-02T10:00:41Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 1187.15,
+    "waehrung": "CHF",
+    "referenz": "Internet"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-02T10:00:43Z",
+    "quell_iban": "CH00007620000000000044",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 1266.14,
+    "waehrung": "CHF",
+    "referenz": "Internet"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-02T10:00:45Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 246.41,
+    "waehrung": "CHF",
+    "referenz": "Telefon"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-02T10:00:47Z",
+    "quell_iban": "CH00007620000000000066",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 64.05,
+    "waehrung": "CHF",
+    "referenz": "Einkauf"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-02T10:00:49Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 506.18,
+    "waehrung": "CHF",
+    "referenz": "Elektronik"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-02T10:00:51Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 181.62,
+    "waehrung": "CHF",
+    "referenz": "Telefon"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-02T10:00:53Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 313.39,
+    "waehrung": "CHF",
+    "referenz": "Arztrechnung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-02T10:00:55Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 519.25,
+    "waehrung": "CHF",
+    "referenz": "Reise"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-03T08:00:00Z",
+    "datum": "2026-03-03"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-03T10:00:01Z",
+    "ziel_iban": "CH00007620000000000099",
+    "betrag": 1806.03,
+    "waehrung": "CHF",
+    "absender_iban": "GB29NWBK60161331926819",
+    "referenz": "Rueckerstattung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-03T10:00:03Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 427.35,
+    "waehrung": "CHF",
+    "referenz": "Zahnarzt"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-03T10:00:05Z",
+    "quell_iban": "CH00007620000000000044",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 298.68,
+    "waehrung": "CHF",
+    "referenz": "Spende"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-03T10:00:07Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 1024.37,
+    "waehrung": "CHF",
+    "referenz": "Versicherung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-03T10:00:09Z",
+    "quell_iban": "CH00007620000000000066",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 324.4,
+    "waehrung": "CHF",
+    "referenz": "Abo"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-03T10:00:11Z",
+    "quell_iban": "CH00007620000000000066",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 616.02,
+    "waehrung": "CHF",
+    "referenz": "Moebel"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-03T10:00:13Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 496.68,
+    "waehrung": "CHF",
+    "referenz": "Reise"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-03T10:00:15Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 779.71,
+    "waehrung": "CHF",
+    "referenz": "Arztrechnung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-03T10:00:17Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 318.68,
+    "waehrung": "CHF",
+    "referenz": "Strom"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-03T10:00:19Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 763.21,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-03T10:00:21Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 368.16,
+    "waehrung": "CHF",
+    "referenz": "Reise"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-04T08:00:00Z",
+    "datum": "2026-03-04"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-04T10:00:01Z",
+    "ziel_iban": "CH00007620000000000033",
+    "betrag": 360.7,
+    "waehrung": "CHF",
+    "absender_iban": "IT60X0542811101000000123456",
+    "referenz": "Lohnzahlung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-04T10:00:03Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 222.32,
+    "waehrung": "CHF",
+    "referenz": "Miete"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-04T10:00:05Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 423.84,
+    "waehrung": "CHF",
+    "referenz": "Strom"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-04T10:00:07Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 53.8,
+    "waehrung": "CHF",
+    "referenz": "Einkauf"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-04T10:00:09Z",
+    "quell_iban": "CH00007620000000000044",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 91.29,
+    "waehrung": "CHF",
+    "referenz": "Internet"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-04T10:00:11Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 44.79,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-04T10:00:13Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "CH00007620000000000077",
+    "betrag": 222.34,
+    "waehrung": "CHF",
+    "referenz": "Interne Ueberweisung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-04T10:00:15Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 446.76,
+    "waehrung": "CHF",
+    "referenz": "Elektronik"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-04T10:00:17Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 187.37,
+    "waehrung": "CHF",
+    "referenz": "Arztrechnung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-04T10:00:19Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 722.53,
+    "waehrung": "CHF",
+    "referenz": "Abo"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-04T10:00:21Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 64.45,
+    "waehrung": "CHF",
+    "referenz": "Reise"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-04T10:00:23Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 621.09,
+    "waehrung": "CHF",
+    "referenz": "Strom"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-05T08:00:00Z",
+    "datum": "2026-03-05"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-05T10:00:01Z",
+    "ziel_iban": "CH00007620000000000011",
+    "betrag": 481.28,
+    "waehrung": "CHF",
+    "absender_iban": "AT611904300234573201",
+    "referenz": "Bonus"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-05T10:00:03Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 128.95,
+    "waehrung": "CHF",
+    "referenz": "Miete"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-05T10:00:05Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 673.26,
+    "waehrung": "CHF",
+    "referenz": "Arztrechnung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-05T10:00:07Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "CH00007620000000000088",
+    "betrag": 432.05,
+    "waehrung": "CHF",
+    "referenz": "Interne Ueberweisung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-05T10:00:09Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 92.12,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-05T10:00:11Z",
+    "quell_iban": "CH00007620000000000044",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 778.32,
+    "waehrung": "CHF",
+    "referenz": "Fitness"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-05T10:00:13Z",
+    "quell_iban": "CH00007620000000000044",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 83.49,
+    "waehrung": "CHF",
+    "referenz": "Abo"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-05T10:00:15Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 372.18,
+    "waehrung": "CHF",
+    "referenz": "Internet"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-05T10:00:17Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 409.29,
+    "waehrung": "CHF",
+    "referenz": "Moebel"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-05T10:00:19Z",
+    "quell_iban": "CH00007620000000000066",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 353.64,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-05T10:00:21Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 741.57,
+    "waehrung": "CHF",
+    "referenz": "Arztrechnung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-05T10:00:23Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 261.27,
+    "waehrung": "CHF",
+    "referenz": "Strom"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-05T10:00:25Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 258.09,
+    "waehrung": "CHF",
+    "referenz": "Zahnarzt"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-06T08:00:00Z",
+    "datum": "2026-03-06"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-06T10:00:01Z",
+    "ziel_iban": "CH00007620000000000099",
+    "betrag": 1688.26,
+    "waehrung": "CHF",
+    "absender_iban": "DE89370400440532013000",
+    "referenz": "Dividende"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-06T10:00:03Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 775.04,
+    "waehrung": "CHF",
+    "referenz": "Versicherung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-06T10:00:05Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 1308.78,
+    "waehrung": "CHF",
+    "referenz": "Geschenk"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-06T10:00:07Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 84.83,
+    "waehrung": "CHF",
+    "referenz": "Telefon"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-06T10:00:09Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 166.53,
+    "waehrung": "CHF",
+    "referenz": "Strom"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-06T10:00:11Z",
+    "quell_iban": "CH00007620000000000066",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 628.94,
+    "waehrung": "CHF",
+    "referenz": "Geschenk"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-06T10:00:13Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 106.8,
+    "waehrung": "CHF",
+    "referenz": "Versicherung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-06T10:00:15Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 142.71,
+    "waehrung": "CHF",
+    "referenz": "Moebel"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-06T10:00:17Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 347.06,
+    "waehrung": "CHF",
+    "referenz": "Einkauf"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-06T10:00:19Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 127.42,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-09T08:00:00Z",
+    "datum": "2026-03-09"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-09T10:00:01Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 25.43,
+    "waehrung": "CHF",
+    "referenz": "Zahnarzt"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-09T10:00:03Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 281.79,
+    "waehrung": "CHF",
+    "referenz": "Arztrechnung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-09T10:00:05Z",
+    "quell_iban": "CH00007620000000000044",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 717.65,
+    "waehrung": "CHF",
+    "referenz": "Versicherung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-09T10:00:07Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 292.37,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-09T10:00:09Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 654.87,
+    "waehrung": "CHF",
+    "referenz": "Versicherung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-09T10:00:11Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 464.8,
+    "waehrung": "CHF",
+    "referenz": "Moebel"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-09T10:00:13Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 290.3,
+    "waehrung": "CHF",
+    "referenz": "Einkauf"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-09T10:00:15Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 646.91,
+    "waehrung": "CHF",
+    "referenz": "Miete"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-09T10:00:17Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 458.44,
+    "waehrung": "CHF",
+    "referenz": "Restaurant"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-10T08:00:00Z",
+    "datum": "2026-03-10"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-10T10:00:01Z",
+    "ziel_iban": "CH00007620000000000055",
+    "betrag": 206.72,
+    "waehrung": "CHF",
+    "absender_iban": "FR7630006000011234567890189",
+    "referenz": "Bonus"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-10T10:00:03Z",
+    "ziel_iban": "CH00007620000000000088",
+    "betrag": 1844.0,
+    "waehrung": "CHF",
+    "absender_iban": "AT611904300234573201",
+    "referenz": "Rueckerstattung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-10T10:00:05Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 57.05,
+    "waehrung": "CHF",
+    "referenz": "Telefon"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-10T10:00:07Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 621.75,
+    "waehrung": "CHF",
+    "referenz": "Zahnarzt"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-10T10:00:09Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 754.12,
+    "waehrung": "CHF",
+    "referenz": "Internet"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-10T10:00:11Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 260.65,
+    "waehrung": "CHF",
+    "referenz": "Transport"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-10T10:00:13Z",
+    "quell_iban": "CH00007620000000000066",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 631.72,
+    "waehrung": "CHF",
+    "referenz": "Einkauf"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-10T10:00:15Z",
+    "quell_iban": "CH00007620000000000066",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 308.92,
+    "waehrung": "CHF",
+    "referenz": "Reise"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-10T10:00:17Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 759.54,
+    "waehrung": "CHF",
+    "referenz": "Moebel"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-10T10:00:19Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 458.31,
+    "waehrung": "CHF",
+    "referenz": "Arztrechnung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-10T10:00:21Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 184.51,
+    "waehrung": "CHF",
+    "referenz": "Spende"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-10T10:00:23Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 121.11,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-10T10:00:25Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 512.59,
+    "waehrung": "CHF",
+    "referenz": "Arztrechnung"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-11T08:00:00Z",
+    "datum": "2026-03-11"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-11T10:00:01Z",
+    "ziel_iban": "CH00007620000000000033",
+    "betrag": 587.65,
+    "waehrung": "CHF",
+    "absender_iban": "GB29NWBK60161331926819",
+    "referenz": "Gehalt"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-11T10:00:03Z",
+    "ziel_iban": "CH00007620000000000055",
+    "betrag": 932.62,
+    "waehrung": "CHF",
+    "absender_iban": "AT611904300234573201",
+    "referenz": "Mieteinnahme"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-11T10:00:05Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 524.27,
+    "waehrung": "CHF",
+    "referenz": "Einkauf"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-11T10:00:07Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 366.52,
+    "waehrung": "CHF",
+    "referenz": "Versicherung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-11T10:00:09Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 840.21,
+    "waehrung": "CHF",
+    "referenz": "Moebel"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-11T10:00:11Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 276.98,
+    "waehrung": "CHF",
+    "referenz": "Spende"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-11T10:00:13Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 566.56,
+    "waehrung": "CHF",
+    "referenz": "Einkauf"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-11T10:00:15Z",
+    "quell_iban": "CH00007620000000000066",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 52.31,
+    "waehrung": "CHF",
+    "referenz": "Restaurant"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-11T10:00:17Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 741.2,
+    "waehrung": "CHF",
+    "referenz": "Reise"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-11T10:00:19Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 507.63,
+    "waehrung": "CHF",
+    "referenz": "Strom"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-11T10:00:21Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 484.17,
+    "waehrung": "CHF",
+    "referenz": "Miete"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-12T08:00:00Z",
+    "datum": "2026-03-12"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-12T10:00:01Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 311.34,
+    "waehrung": "CHF",
+    "referenz": "Versicherung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-12T10:00:03Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 188.73,
+    "waehrung": "CHF",
+    "referenz": "Versicherung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-12T10:00:05Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 86.4,
+    "waehrung": "CHF",
+    "referenz": "Transport"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-12T10:00:07Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 749.73,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-12T10:00:09Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 406.66,
+    "waehrung": "CHF",
+    "referenz": "Telefon"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-12T10:00:11Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 146.57,
+    "waehrung": "CHF",
+    "referenz": "Restaurant"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-13T08:00:00Z",
+    "datum": "2026-03-13"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-13T10:00:01Z",
+    "ziel_iban": "CH00007620000000000011",
+    "betrag": 837.39,
+    "waehrung": "CHF",
+    "absender_iban": "GB29NWBK60161331926819",
+    "referenz": "Mieteinnahme"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-13T10:00:03Z",
+    "ziel_iban": "CH00007620000000000066",
+    "betrag": 1430.78,
+    "waehrung": "CHF",
+    "absender_iban": "FR7630006000011234567890189",
+    "referenz": "Bonus"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-13T10:00:05Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 609.12,
+    "waehrung": "CHF",
+    "referenz": "Internet"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-13T10:00:07Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 281.66,
+    "waehrung": "CHF",
+    "referenz": "Moebel"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-13T10:00:09Z",
+    "quell_iban": "CH00007620000000000044",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 383.71,
+    "waehrung": "CHF",
+    "referenz": "Moebel"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-13T10:00:11Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 2279.15,
+    "waehrung": "CHF",
+    "referenz": "Arztrechnung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-13T10:00:13Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 304.23,
+    "waehrung": "CHF",
+    "referenz": "Reise"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-13T10:00:15Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 688.01,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-13T10:00:17Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 116.16,
+    "waehrung": "CHF",
+    "referenz": "Geschenk"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-13T10:00:19Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 585.75,
+    "waehrung": "CHF",
+    "referenz": "Strom"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-16T08:00:00Z",
+    "datum": "2026-03-16"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-16T10:00:01Z",
+    "ziel_iban": "CH00007620000000000099",
+    "betrag": 466.25,
+    "waehrung": "CHF",
+    "absender_iban": "IT60X0542811101000000123456",
+    "referenz": "Rueckerstattung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-16T10:00:03Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 370.59,
+    "waehrung": "CHF",
+    "referenz": "Restaurant"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-16T10:00:05Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 409.05,
+    "waehrung": "CHF",
+    "referenz": "Internet"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-16T10:00:07Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 548.13,
+    "waehrung": "CHF",
+    "referenz": "Spende"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-16T10:00:09Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 235.2,
+    "waehrung": "CHF",
+    "referenz": "Einkauf"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-16T10:00:11Z",
+    "quell_iban": "CH00007620000000000066",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 179.31,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-16T10:00:13Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 16.69,
+    "waehrung": "CHF",
+    "referenz": "Reise"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-16T10:00:15Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 227.55,
+    "waehrung": "CHF",
+    "referenz": "Zahnarzt"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-17T08:00:00Z",
+    "datum": "2026-03-17"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-17T10:00:01Z",
+    "ziel_iban": "CH00007620000000000011",
+    "betrag": 1998.92,
+    "waehrung": "CHF",
+    "absender_iban": "FR7630006000011234567890189",
+    "referenz": "Dividende"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-17T10:00:03Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 762.23,
+    "waehrung": "CHF",
+    "referenz": "Restaurant"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-17T10:00:05Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 547.8,
+    "waehrung": "CHF",
+    "referenz": "Spende"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-17T10:00:07Z",
+    "quell_iban": "CH00007620000000000044",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 340.67,
+    "waehrung": "CHF",
+    "referenz": "Restaurant"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-17T10:00:08Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 552.19,
+    "waehrung": "CHF",
+    "referenz": "Spende"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-17T10:00:10Z",
+    "quell_iban": "CH00007620000000000066",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 410.78,
+    "waehrung": "CHF",
+    "referenz": "Transport"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-17T10:00:12Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 648.59,
+    "waehrung": "CHF",
+    "referenz": "Einkauf"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-17T10:00:14Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 527.0,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-17T10:00:16Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 597.93,
+    "waehrung": "CHF",
+    "referenz": "Arztrechnung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-17T10:00:18Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 376.37,
+    "waehrung": "CHF",
+    "referenz": "Strom"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-18T08:00:00Z",
+    "datum": "2026-03-18"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-18T10:00:01Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 789.45,
+    "waehrung": "CHF",
+    "referenz": "Einkauf"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-18T10:00:03Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 625.36,
+    "waehrung": "CHF",
+    "referenz": "Einkauf"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-18T10:00:05Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 621.1,
+    "waehrung": "CHF",
+    "referenz": "Einkauf"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-18T10:00:07Z",
+    "quell_iban": "CH00007620000000000044",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 79.55,
+    "waehrung": "CHF",
+    "referenz": "Elektronik"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-18T10:00:09Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 898.83,
+    "waehrung": "CHF",
+    "referenz": "Zahnarzt"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-18T10:00:11Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 760.55,
+    "waehrung": "CHF",
+    "referenz": "Abo"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-18T10:00:13Z",
+    "quell_iban": "CH00007620000000000066",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 505.08,
+    "waehrung": "CHF",
+    "referenz": "Zahnarzt"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-18T10:00:15Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 2396.93,
+    "waehrung": "CHF",
+    "referenz": "Geschenk"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-18T10:00:17Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 276.89,
+    "waehrung": "CHF",
+    "referenz": "Telefon"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-18T10:00:19Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 735.38,
+    "waehrung": "CHF",
+    "referenz": "Telefon"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-19T08:00:00Z",
+    "datum": "2026-03-19"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-19T10:00:01Z",
+    "ziel_iban": "CH00007620000000000011",
+    "betrag": 1058.8,
+    "waehrung": "CHF",
+    "absender_iban": "GB29NWBK60161331926819",
+    "referenz": "Gehalt"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-19T10:00:03Z",
+    "ziel_iban": "CH00007620000000000044",
+    "betrag": 1765.43,
+    "waehrung": "CHF",
+    "absender_iban": "IT60X0542811101000000123456",
+    "referenz": "Gutschrift"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-19T10:00:05Z",
+    "ziel_iban": "CH00007620000000000088",
+    "betrag": 305.42,
+    "waehrung": "CHF",
+    "absender_iban": "GB29NWBK60161331926819",
+    "referenz": "Lohnzahlung"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-19T10:00:07Z",
+    "ziel_iban": "CH00007620000000000099",
+    "betrag": 320.0,
+    "waehrung": "CHF",
+    "absender_iban": "GB29NWBK60161331926819",
+    "referenz": "Nebenjob"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-19T10:00:09Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 384.77,
+    "waehrung": "CHF",
+    "referenz": "Miete"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-19T10:00:11Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 92.88,
+    "waehrung": "CHF",
+    "referenz": "Internet"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-19T10:00:13Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 233.34,
+    "waehrung": "CHF",
+    "referenz": "Spende"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-19T10:00:15Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 169.32,
+    "waehrung": "CHF",
+    "referenz": "Reise"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-19T10:00:17Z",
+    "quell_iban": "CH00007620000000000066",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 729.18,
+    "waehrung": "CHF",
+    "referenz": "Spende"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-19T10:00:19Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 669.83,
+    "waehrung": "CHF",
+    "referenz": "Telefon"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-19T10:00:21Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 760.06,
+    "waehrung": "CHF",
+    "referenz": "Strom"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-20T08:00:00Z",
+    "datum": "2026-03-20"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-20T10:00:01Z",
+    "ziel_iban": "CH00007620000000000022",
+    "betrag": 652.08,
+    "waehrung": "CHF",
+    "absender_iban": "DE89370400440532013000",
+    "referenz": "Freelance-Auftrag"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-20T10:00:03Z",
+    "ziel_iban": "CH00007620000000000077",
+    "betrag": 1718.8,
+    "waehrung": "CHF",
+    "absender_iban": "GB29NWBK60161331926819",
+    "referenz": "Freelance-Auftrag"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-20T10:00:05Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 221.96,
+    "waehrung": "CHF",
+    "referenz": "Zahnarzt"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-20T10:00:07Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 653.82,
+    "waehrung": "CHF",
+    "referenz": "Moebel"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-20T10:00:09Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 670.21,
+    "waehrung": "CHF",
+    "referenz": "Spende"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-20T10:00:11Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 639.56,
+    "waehrung": "CHF",
+    "referenz": "Versicherung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-20T10:00:13Z",
+    "quell_iban": "CH00007620000000000044",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 91.93,
+    "waehrung": "CHF",
+    "referenz": "Spende"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-20T10:00:15Z",
+    "quell_iban": "CH00007620000000000044",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 643.79,
+    "waehrung": "CHF",
+    "referenz": "Einkauf"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-20T10:00:17Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 492.97,
+    "waehrung": "CHF",
+    "referenz": "Telefon"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-20T10:00:19Z",
+    "quell_iban": "CH00007620000000000066",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 711.2,
+    "waehrung": "CHF",
+    "referenz": "Strom"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-20T10:00:21Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 566.61,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-20T10:00:23Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 277.26,
+    "waehrung": "CHF",
+    "referenz": "Internet"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-20T10:00:25Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 390.72,
+    "waehrung": "CHF",
+    "referenz": "Moebel"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-20T10:00:27Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 714.73,
+    "waehrung": "CHF",
+    "referenz": "Einkauf"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-23T08:00:00Z",
+    "datum": "2026-03-23"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-23T10:00:01Z",
+    "ziel_iban": "CH00007620000000000099",
+    "betrag": 943.96,
+    "waehrung": "CHF",
+    "absender_iban": "GB29NWBK60161331926819",
+    "referenz": "Bonus"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-23T10:00:03Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 363.18,
+    "waehrung": "CHF",
+    "referenz": "Spende"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-23T10:00:05Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 1306.88,
+    "waehrung": "CHF",
+    "referenz": "Versicherung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-23T10:00:07Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 499.06,
+    "waehrung": "CHF",
+    "referenz": "Abo"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-23T10:00:09Z",
+    "quell_iban": "CH00007620000000000044",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 370.4,
+    "waehrung": "CHF",
+    "referenz": "Versicherung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-23T10:00:11Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 272.26,
+    "waehrung": "CHF",
+    "referenz": "Spende"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-23T10:00:13Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 576.16,
+    "waehrung": "CHF",
+    "referenz": "Geschenk"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-23T10:00:15Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 422.37,
+    "waehrung": "CHF",
+    "referenz": "Versicherung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-23T10:00:17Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 659.25,
+    "waehrung": "CHF",
+    "referenz": "Elektronik"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-23T10:00:19Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 158.16,
+    "waehrung": "CHF",
+    "referenz": "Moebel"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-23T10:00:21Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 46.74,
+    "waehrung": "CHF",
+    "referenz": "Internet"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-24T08:00:00Z",
+    "datum": "2026-03-24"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-24T10:00:01Z",
+    "ziel_iban": "CH00007620000000000077",
+    "betrag": 1877.09,
+    "waehrung": "CHF",
+    "absender_iban": "GB29NWBK60161331926819",
+    "referenz": "Bonus"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-24T10:00:03Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 111.42,
+    "waehrung": "CHF",
+    "referenz": "Arztrechnung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-24T10:00:05Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 783.81,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-24T10:00:07Z",
+    "quell_iban": "CH00007620000000000044",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 776.69,
+    "waehrung": "CHF",
+    "referenz": "Telefon"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-24T10:00:09Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 442.77,
+    "waehrung": "CHF",
+    "referenz": "Transport"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-24T10:00:11Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 509.74,
+    "waehrung": "CHF",
+    "referenz": "Reise"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-24T10:00:13Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 454.2,
+    "waehrung": "CHF",
+    "referenz": "Elektronik"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-24T10:00:15Z",
+    "quell_iban": "CH00007620000000000088",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 20.09,
+    "waehrung": "CHF",
+    "referenz": "Moebel"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-24T10:00:17Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 167.92,
+    "waehrung": "CHF",
+    "referenz": "Einkauf"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-24T10:00:19Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 2068.71,
+    "waehrung": "CHF",
+    "referenz": "Transport"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-25T08:00:00Z",
+    "datum": "2026-03-25"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-25T10:00:01Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 316.17,
+    "waehrung": "CHF",
+    "referenz": "Arztrechnung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-25T10:00:03Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 1987.34,
+    "waehrung": "CHF",
+    "referenz": "Restaurant"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-25T10:00:05Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 449.71,
+    "waehrung": "CHF",
+    "referenz": "Fitness"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-25T10:00:07Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "CH00007620000000000099",
+    "betrag": 369.36,
+    "waehrung": "CHF",
+    "referenz": "Interne Ueberweisung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-25T10:00:09Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 50.18,
+    "waehrung": "CHF",
+    "referenz": "Reise"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-25T10:00:11Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 338.59,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-26T08:00:00Z",
+    "datum": "2026-03-26"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-26T10:00:01Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 199.87,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-26T10:00:03Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 233.43,
+    "waehrung": "CHF",
+    "referenz": "Zahnarzt"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-26T10:00:05Z",
+    "quell_iban": "CH00007620000000000066",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 176.52,
+    "waehrung": "CHF",
+    "referenz": "Elektronik"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-26T10:00:06Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 664.71,
+    "waehrung": "CHF",
+    "referenz": "Elektronik"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-26T10:00:08Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 189.84,
+    "waehrung": "CHF",
+    "referenz": "Moebel"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-26T10:00:10Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 259.96,
+    "waehrung": "CHF",
+    "referenz": "Miete"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-27T08:00:00Z",
+    "datum": "2026-03-27"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-27T10:00:01Z",
+    "ziel_iban": "CH00007620000000000055",
+    "betrag": 1863.29,
+    "waehrung": "CHF",
+    "absender_iban": "IT60X0542811101000000123456",
+    "referenz": "Gehalt"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-27T10:00:03Z",
+    "quell_iban": "CH00007620000000000011",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 812.65,
+    "waehrung": "CHF",
+    "referenz": "Moebel"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-27T10:00:04Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 243.03,
+    "waehrung": "CHF",
+    "referenz": "Zahnarzt"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-27T10:00:05Z",
+    "quell_iban": "CH00007620000000000022",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 2249.53,
+    "waehrung": "CHF",
+    "referenz": "Versicherung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-27T10:00:06Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 250.71,
+    "waehrung": "CHF",
+    "referenz": "Zahnarzt"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-27T10:00:08Z",
+    "quell_iban": "CH00007620000000000055",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 100.55,
+    "waehrung": "CHF",
+    "referenz": "Versicherung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-27T10:00:10Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 111.29,
+    "waehrung": "CHF",
+    "referenz": "Internet"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-27T10:00:12Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 269.39,
+    "waehrung": "CHF",
+    "referenz": "Telefon"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-27T10:00:14Z",
+    "quell_iban": "CH00007620000000000100",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 259.9,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-30T08:00:00Z",
+    "datum": "2026-03-30"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-30T10:00:01Z",
+    "quell_iban": "CH00007620000000000066",
+    "ziel_iban": "GB29NWBK60161331926819",
+    "betrag": 436.34,
+    "waehrung": "CHF",
+    "referenz": "Moebel"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-30T10:00:02Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "IT60X0542811101000000123456",
+    "betrag": 413.23,
+    "waehrung": "CHF",
+    "referenz": "Abo"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-30T10:00:04Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "CH00007620000000000044",
+    "betrag": 431.59,
+    "waehrung": "CHF",
+    "referenz": "Interne Ueberweisung"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-30T10:00:06Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "AT611904300234573201",
+    "betrag": 591.38,
+    "waehrung": "CHF",
+    "referenz": "Zahnarzt"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-30T10:00:08Z",
+    "quell_iban": "CH00007620000000000099",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 41.93,
+    "waehrung": "CHF",
+    "referenz": "Kleidung"
+  },
+  {
+    "typ": "zeit",
+    "zeitstempel": "2026-03-31T08:00:00Z",
+    "datum": "2026-03-31"
+  },
+  {
+    "typ": "ueberweisung_ein",
+    "zeitstempel": "2026-03-31T10:00:01Z",
+    "ziel_iban": "CH00007620000000000033",
+    "betrag": 1963.12,
+    "waehrung": "CHF",
+    "absender_iban": "AT611904300234573201",
+    "referenz": "Dividende"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-31T10:00:03Z",
+    "quell_iban": "CH00007620000000000033",
+    "ziel_iban": "FR7630006000011234567890189",
+    "betrag": 636.2,
+    "waehrung": "CHF",
+    "referenz": "Miete"
+  },
+  {
+    "typ": "ueberweisung_aus",
+    "zeitstempel": "2026-03-31T10:00:05Z",
+    "quell_iban": "CH00007620000000000077",
+    "ziel_iban": "DE89370400440532013000",
+    "betrag": 650.83,
+    "waehrung": "CHF",
+    "referenz": "Spende"
+  }
+]

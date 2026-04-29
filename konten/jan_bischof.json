@@ -1,0 +1,326 @@
+{
+  "konto_iban": "CH00007620000000000100",
+  "kunde": {
+    "name": "Jan Bischof",
+    "adresse": "Tittwiesenstrasse 6, 7000 Chur",
+    "geburtsdatum": "2000-06-25"
+  },
+  "kontostand": 63.44999999999868,
+  "kredit_stand": -5144.539999999998,
+  "status": "gesperrt",
+  "transaktionen": [
+    {
+      "zeitstempel": "2026-01-02T09:00:10Z",
+      "typ": "konto_eroeffnen",
+      "betrag": 0.0,
+      "saldo_nachher": 0.0,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-01-01",
+      "typ": "kredit_amortisation",
+      "betrag": 0.0,
+      "saldo_nachher": 0.0,
+      "status": "abgelehnt"
+    },
+    {
+      "zeitstempel": "2026-01-01T08:00:00Z",
+      "typ": "kontogebuehr",
+      "betrag": -25.0,
+      "saldo_nachher": -25.0,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-01-02T10:00:05Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 477.79,
+      "saldo_nachher": 452.79,
+      "status": "ausgefuehrt",
+      "referenz": "Freelance-Auftrag"
+    },
+    {
+      "zeitstempel": "2026-01-09T10:00:05Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 242.96,
+      "saldo_nachher": 695.75,
+      "status": "ausgefuehrt",
+      "referenz": "Verkaufserloes"
+    },
+    {
+      "zeitstempel": "2026-02-02T10:00:21Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 1962,
+      "saldo_nachher": 2657.75,
+      "status": "ausgefuehrt",
+      "referenz": "Lohnzahlung February 2026"
+    },
+    {
+      "zeitstempel": "2026-02-02T10:00:28Z",
+      "typ": "kredit_auszahlung",
+      "betrag": 8000,
+      "saldo_nachher": 10657.75,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-02-02T10:00:28Z",
+      "typ": "kredit_gebuehr",
+      "betrag": -250.0,
+      "saldo_nachher": 10407.75,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-02-04T10:00:03Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 1759.33,
+      "saldo_nachher": 12167.08,
+      "status": "ausgefuehrt",
+      "referenz": "Lohnzahlung"
+    },
+    {
+      "zeitstempel": "2026-03-02T10:00:19Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 1971,
+      "saldo_nachher": 14138.08,
+      "status": "ausgefuehrt",
+      "referenz": "Lohnzahlung March 2026"
+    },
+    {
+      "zeitstempel": "2026-04-01",
+      "typ": "kredit_zinsen",
+      "betrag": -103.51,
+      "saldo_nachher": 14034.57,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-04-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 13201.24,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-04-01T08:00:00Z",
+      "typ": "kontogebuehr",
+      "betrag": -25.0,
+      "saldo_nachher": 13176.24,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-05-01",
+      "typ": "kredit_zinsen",
+      "betrag": -93.09,
+      "saldo_nachher": 13083.15,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-05-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 12249.82,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-06-01",
+      "typ": "kredit_zinsen",
+      "betrag": -82.68,
+      "saldo_nachher": 12167.14,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-06-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 11333.81,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-07-01",
+      "typ": "kredit_zinsen",
+      "betrag": -72.26,
+      "saldo_nachher": 11261.55,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-07-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 10428.22,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-07-01T08:00:00Z",
+      "typ": "kontogebuehr",
+      "betrag": -25.0,
+      "saldo_nachher": 10403.22,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-09-01",
+      "typ": "kredit_zinsen",
+      "betrag": -61.84,
+      "saldo_nachher": 10341.38,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-09-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 9508.05,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-10-01",
+      "typ": "kredit_zinsen",
+      "betrag": -51.43,
+      "saldo_nachher": 9456.619999999999,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-10-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 8623.289999999999,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-10-01T08:00:00Z",
+      "typ": "kontogebuehr",
+      "betrag": -25.0,
+      "saldo_nachher": 8598.289999999999,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-12-01",
+      "typ": "kredit_zinsen",
+      "betrag": -41.01,
+      "saldo_nachher": 8557.279999999999,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2026-12-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 7723.949999999999,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-01-01",
+      "typ": "kredit_zinsen",
+      "betrag": -30.59,
+      "saldo_nachher": 7693.359999999999,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-01-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 6860.029999999999,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-01-01T08:00:00Z",
+      "typ": "kontogebuehr",
+      "betrag": -25.0,
+      "saldo_nachher": 6835.029999999999,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-02-01",
+      "typ": "kredit_zinsen",
+      "betrag": -20.18,
+      "saldo_nachher": 6814.8499999999985,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-02-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 5981.519999999999,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-03-01",
+      "typ": "kredit_zinsen",
+      "betrag": -9.76,
+      "saldo_nachher": 5971.759999999998,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-03-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 5138.4299999999985,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-04-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 4305.0999999999985,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-04-01T08:00:00Z",
+      "typ": "kontogebuehr",
+      "betrag": -25.0,
+      "saldo_nachher": 4280.0999999999985,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-06-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 3446.7699999999986,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-07-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 2613.4399999999987,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-07-01T08:00:00Z",
+      "typ": "kontogebuehr",
+      "betrag": -25.0,
+      "saldo_nachher": 2588.4399999999987,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-09-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 1755.1099999999988,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-10-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 921.7799999999987,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-10-01T08:00:00Z",
+      "typ": "kontogebuehr",
+      "betrag": -25.0,
+      "saldo_nachher": 896.7799999999987,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-11-01",
+      "typ": "kredit_amortisation",
+      "betrag": -833.33,
+      "saldo_nachher": 63.44999999999868,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-12-01",
+      "typ": "kredit_amortisation",
+      "betrag": 0.0,
+      "saldo_nachher": 63.44999999999868,
+      "status": "abgelehnt"
+    }
+  ]
+}
