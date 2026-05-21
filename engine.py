@@ -46,7 +46,7 @@ def erstelle_zusammenfassung(alle_transaktionen, simulation_start, simulation_en
         "anzahl_kunden": len(konten_uebersicht),
         "anzahl_transaktionen": len(alle_transaktionen),
         "anzahl_buchungen": len(bankkonten.get("buchungen", [])),
-        "kontostande": konten_uebersicht,
+        "kontostande": dict(sorted(konten_uebersicht.items())),
         "bankkonten": {
             "zentralbankkonto": round(bankkonten.get("zentralbankkonto", 0.0), 2),
             "verpflichtungskonto": round(bankkonten.get("verpflichtungskonto", 0.0), 2),
@@ -73,11 +73,22 @@ def _lade_alle_ibans():
                     pass
     return ibans
 
+verarbeitete_monate = set()
+verarbeitete_quartale = set()
+erstes_simulations_quartal = None
+
+
+def _quartal_key(datum):
+    return datum.year, (datum.month - 1) // 3 + 1
+
+
 def _fuehre_monatsverarbeitung(monat_datum_str, alle_ibans):
     """Zinsen, Amortisation, Abschreibung für alle Konten."""
     for iban in alle_ibans:
         kredit.kredit_zinsen_berechnen(iban, monat_datum_str)
-        kredit.kredit_amortisation(iban, monat_datum_str)
+        kunden_konto = speicherung.lade_konto(iban)
+        if kunden_konto and kunden_konto.get("status") != "gesperrt":
+            kredit.kredit_amortisation(iban, monat_datum_str)
         kredit.kredit_abschreibung_pruefen(iban, monat_datum_str)
 
 def _fuehre_quartalsverarbeitung(quartal_datum_str, alle_ibans):
@@ -103,20 +114,30 @@ def verarbeite_periodische_aufgaben(datum_str):
     """
     Führt automatisierte Buchungen basierend auf dem Datum aus.
     """
+    global erstes_simulations_quartal
+
     datum = datetime.strptime(datum_str, "%Y-%m-%d")
     alle_ibans = _lade_alle_ibans()
 
-    # --- Täglich: Strafzinsen für gesperrte Konten ---
+    # --- Monatlich: einmal pro Monat am ersten verarbeiteten Arbeitstag ---
+    monats_key = (datum.year, datum.month)
+    if monats_key not in verarbeitete_monate:
+        _fuehre_monatsverarbeitung(datum_str, alle_ibans)
+        verarbeitete_monate.add(monats_key)
+
+    # --- Quartalsweise: ab dem ersten vollständigen Folgequartal ---
+    quartal_key = _quartal_key(datum)
+    if erstes_simulations_quartal is None:
+        erstes_simulations_quartal = quartal_key
+    if datum.month in [1, 4, 7, 10] \
+            and quartal_key != erstes_simulations_quartal \
+            and quartal_key not in verarbeitete_quartale:
+        _fuehre_quartalsverarbeitung(datum_str, alle_ibans)
+        verarbeitete_quartale.add(quartal_key)
+
+    # --- Täglich: Strafzinsen für gesperrte Konten, nach Monats-/Quartalslauf ---
     for iban in alle_ibans:
         kredit.kredit_strafzinsen(iban, datum_str)
-
-    # --- Monatlich: nur am Monatsersten ---
-    if datum.day == 1:
-        _fuehre_monatsverarbeitung(datum_str, alle_ibans)
-
-    # --- Quartalsweise: Januar, April, Juli, Oktober (fixer Monatserster) ---
-    if datum.day == 1 and datum.month in [1, 4, 7, 10]:
-        _fuehre_quartalsverarbeitung(datum_str, alle_ibans)
 
 iban_zaehler_global = 1
 
@@ -185,8 +206,11 @@ def verarbeite_tages_batch(tag_datum, tx_liste):
 
 def main():
     """Startet die Simulation für die bereitgestellten Testdaten."""
-    global iban_zaehler_global
+    global iban_zaehler_global, verarbeitete_monate, verarbeitete_quartale, erstes_simulations_quartal
     iban_zaehler_global = 1
+    verarbeitete_monate = set()
+    verarbeitete_quartale = set()
+    erstes_simulations_quartal = None
     buchung.initialisiere_bank()
 
     transaktionen_ordner = "transaktionen"

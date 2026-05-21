@@ -99,6 +99,44 @@ def kunden_daten_aendern(iban, neue_daten, zeitstempel):
     speicherung.speichere_konto(konto)
     return True
 
+def _faellige_kreditrate(konto):
+    kredit_initial = konto.get("kredit_initial", 0)
+    kredit_stand = konto.get("kredit_stand", 0)
+    if kredit_initial <= 0 or kredit_stand <= 0:
+        return 0.0
+    return min(round(kredit_initial / 12, 2), round(kredit_stand, 2))
+
+def _entsperrung_nach_geldeingang_pruefen(konto, zeitstempel):
+    """
+    Zieht bei gesperrten Konten nach einem Geldeingang sofort die fällige Rate ein,
+    sobald der Kontostand dafür reicht.
+    """
+    if konto.get("status") != "gesperrt":
+        return
+
+    rate = _faellige_kreditrate(konto)
+    if rate <= 0 or konto["kontostand"] < rate:
+        return
+
+    konto["kontostand"] -= rate
+    konto["kredit_stand"] = max(0, round(konto["kredit_stand"] - rate, 2))
+    konto["status"] = "aktiv"
+    if konto["kredit_stand"] == 0:
+        konto["kredit_initial"] = 0.0
+
+    konto["transaktionen"].append({
+        "zeitstempel": zeitstempel,
+        "typ": "kredit_amortisation",
+        "betrag": -rate,
+        "saldo_nachher": konto["kontostand"],
+        "status": "ausgefuehrt",
+        "referenz": "Nachzahlung nach Geldeingang"
+    })
+
+    buchung.verbuchen("Kredittilgung", rate,
+                      zeitstempel=zeitstempel,
+                      referenz="Nachzahlung nach Geldeingang")
+
 def einzahlung_verbuchen(iban, betrag, zeitstempel, referenz="Einzahlung"):
     """
     Verbucht eine Gutschrift auf dem Kundenkonto.
@@ -120,6 +158,7 @@ def einzahlung_verbuchen(iban, betrag, zeitstempel, referenz="Einzahlung"):
     })
 
     buchung.verbuchen("Einzahlung", betrag, zeitstempel=zeitstempel, referenz=referenz)
+    _entsperrung_nach_geldeingang_pruefen(konto, zeitstempel)
 
     speicherung.speichere_konto(konto)
     return True

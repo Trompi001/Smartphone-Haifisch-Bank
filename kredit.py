@@ -80,7 +80,10 @@ def kredit_zinsen_berechnen(iban, zeitstempel):
     if restschuld <= 0:
         return
 
-    zinsbetrag = round(restschuld * (0.15 / 12), 2)
+    zinsbetrag = round(restschuld * 0.15 / 12, 2)
+    if zinsbetrag <= 0:
+        return
+
     konto["kontostand"] -= zinsbetrag
 
     konto["transaktionen"].append({
@@ -107,48 +110,44 @@ def kredit_amortisation(iban, zeitstempel):
         return
     if konto.get("kredit_stand", 0) <= 0:
         return
+    if konto.get("status") == "gesperrt":
+        return
 
-    # FIX: kredit_initial aus gespeichertem Wert lesen, kein Hardcode mehr
     kredit_initial = konto.get("kredit_initial", 0)
     if kredit_initial <= 0:
         return
 
-    rate = round(kredit_initial / 12, 2)
+    rate = min(round(kredit_initial / 12, 2), round(konto.get("kredit_stand", 0), 2))
+    if rate <= 0:
+        return
 
     if konto["kontostand"] >= rate:
         konto["kontostand"] -= rate
         konto["kredit_stand"] = max(0, round(konto["kredit_stand"] - rate, 2))
-        status = "ausgefuehrt"
-        # Entsperrung, falls Konto gesperrt war
-        if konto["status"] == "gesperrt":
-            konto["status"] = "aktiv"
+        konto["transaktionen"].append({
+            "zeitstempel": zeitstempel,
+            "typ": "kredit_amortisation",
+            "betrag": -rate,
+            "saldo_nachher": konto["kontostand"],
+            "status": "ausgefuehrt"
+        })
+
+        if konto["kredit_stand"] == 0:
+            konto["kredit_initial"] = 0.0
+
+        buchung.verbuchen("Kredittilgung", rate,
+                          zeitstempel=zeitstempel + "T01:10:00Z",
+                          referenz="Kredittilgung")
     else:
-        # Zahlungsausfall → Konto sperren
         konto["status"] = "gesperrt"
-        status = "abgelehnt"
-
-    konto["transaktionen"].append({
-        "zeitstempel": zeitstempel,
-        "typ": "kredit_amortisation",
-        "betrag": -rate if status == "ausgefuehrt" else 0.0,
-        "saldo_nachher": konto["kontostand"],
-        "status": status
-    })
-
-    # Wenn Konto gerade gesperrt wurde, auch eine "konto_gesperrt" Transaktion hinzufügen
-    if status == "abgelehnt" and konto.get("status") == "gesperrt":
         konto["transaktionen"].append({
             "zeitstempel": zeitstempel + "T01:15:00Z",
             "typ": "konto_gesperrt",
             "betrag": 0.0,
             "saldo_nachher": konto["kontostand"],
-            "status": "ausgefuehrt"
+            "status": "ausgefuehrt",
+            "grund": "Amortisation nicht moeglich"
         })
-
-    if status == "ausgefuehrt":
-        buchung.verbuchen("Kredittilgung", rate,
-                          zeitstempel=zeitstempel + "T01:10:00Z",
-                          referenz="Kredittilgung")
 
     speicherung.speichere_konto(konto)
 
@@ -167,13 +166,16 @@ def kredit_strafzinsen(iban, zeitstempel):
         return
 
     strafzins = round(restschuld * (0.30 / 365), 2)
+    if strafzins <= 0:
+        return
+
     konto["kredit_stand"] = round(konto["kredit_stand"] + strafzins, 2)
 
     # Transaktion im Konto aufzeichnen
     konto["transaktionen"].append({
         "zeitstempel": zeitstempel + "T02:00:00Z",
         "typ": "strafzinsen",
-        "betrag": 0.0,
+        "betrag": -strafzins,
         "saldo_nachher": konto["kontostand"],
         "status": "ausgefuehrt"
     })
@@ -266,7 +268,7 @@ def kredit_abschreibung_pruefen(iban, zeitstempel):
         return
 
     faellig_ab = _add_monate(letzte_zahlung, 6)
-    if pruef_datum < faellig_ab:
+    if (pruef_datum.year, pruef_datum.month) < (faellig_ab.year, faellig_ab.month):
         return
 
     restbetrag = konto.get("kredit_stand", 0)
@@ -280,7 +282,8 @@ def kredit_abschreibung_pruefen(iban, zeitstempel):
         "typ": "kredit_abschreibung",
         "betrag": 0.0,
         "saldo_nachher": konto["kontostand"],
-        "status": "ausgefuehrt"
+        "status": "ausgefuehrt",
+        "grund": "Abschreibung nach 6 Monaten ohne Zahlung"
     })
 
     buchung.verbuchen("Abschreibung", restbetrag,

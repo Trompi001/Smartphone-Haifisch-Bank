@@ -5,7 +5,7 @@
     "adresse": "Seestrasse 42, 6003 Luzern",
     "geburtsdatum": "1995-02-28"
   },
-  "kontostand": 346.1400000000028,
+  "kontostand": 148.68000000000245,
   "kredit_stand": 0.0,
   "kredit_initial": 0.0,
   "status": "aktiv",
@@ -2637,6 +2637,1268 @@
       "saldo_nachher": 346.1400000000028,
       "status": "ausgefuehrt",
       "referenz": "Lohnzahlung"
+    },
+    {
+      "zeitstempel": "2027-05-18T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -687.34,
+      "saldo_nachher": 346.1400000000028,
+      "status": "abgelehnt",
+      "grund": "Deckung nicht ausreichend"
+    },
+    {
+      "zeitstempel": "2027-05-19T10:00:06Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -1492.42,
+      "saldo_nachher": 346.1400000000028,
+      "status": "abgelehnt",
+      "grund": "Deckung nicht ausreichend"
+    },
+    {
+      "zeitstempel": "2027-05-20T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -50.47,
+      "saldo_nachher": 295.6700000000028,
+      "status": "ausgefuehrt",
+      "referenz": "Strom"
+    },
+    {
+      "zeitstempel": "2027-05-24T10:00:10Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -612.4,
+      "saldo_nachher": 295.6700000000028,
+      "status": "abgelehnt",
+      "grund": "Deckung nicht ausreichend"
+    },
+    {
+      "zeitstempel": "2027-05-25T10:00:01Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -159.98,
+      "saldo_nachher": 135.6900000000028,
+      "status": "ausgefuehrt",
+      "referenz": "Abo"
+    },
+    {
+      "zeitstempel": "2027-05-28T10:00:04Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -130.29,
+      "saldo_nachher": 5.400000000002819,
+      "status": "ausgefuehrt",
+      "referenz": "Elektronik"
+    },
+    {
+      "zeitstempel": "2027-05-31T10:00:06Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -159.78,
+      "saldo_nachher": 5.400000000002819,
+      "status": "abgelehnt",
+      "grund": "Deckung nicht ausreichend"
+    },
+    {
+      "zeitstempel": "2027-06-01T10:00:09Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 3377,
+      "saldo_nachher": 3382.400000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Lohnzahlung June 2027"
+    },
+    {
+      "zeitstempel": "2027-06-01T10:00:33Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -36.82,
+      "saldo_nachher": 3345.5800000000027,
+      "status": "ausgefuehrt",
+      "referenz": "Zahnarzt"
+    },
+    {
+      "zeitstempel": "2027-06-01T10:00:35Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -327.82,
+      "saldo_nachher": 3017.7600000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Miete"
+    },
+    {
+      "zeitstempel": "2027-06-03T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -536.46,
+      "saldo_nachher": 2481.3000000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Versicherung"
+    },
+    {
+      "zeitstempel": "2027-06-04T10:00:07Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -681.5,
+      "saldo_nachher": 1799.8000000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Abo"
+    },
+    {
+      "zeitstempel": "2027-06-07T10:00:07Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -389.4,
+      "saldo_nachher": 1410.4000000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Versicherung"
+    },
+    {
+      "zeitstempel": "2027-06-08T10:00:03Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -198.58,
+      "saldo_nachher": 1211.8200000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Zahnarzt"
+    },
+    {
+      "zeitstempel": "2027-06-08T10:00:05Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -288.91,
+      "saldo_nachher": 922.9100000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Interne Ueberweisung"
+    },
+    {
+      "zeitstempel": "2027-06-09T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -508.19,
+      "saldo_nachher": 414.72000000000236,
+      "status": "ausgefuehrt",
+      "referenz": "Transport"
+    },
+    {
+      "zeitstempel": "2027-06-10T10:00:11Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -218.73,
+      "saldo_nachher": 195.99000000000237,
+      "status": "ausgefuehrt",
+      "referenz": "Restaurant"
+    },
+    {
+      "zeitstempel": "2027-06-11T10:00:01Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 1404.66,
+      "saldo_nachher": 1600.6500000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Lohnzahlung"
+    },
+    {
+      "zeitstempel": "2027-06-11T10:00:05Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -178.03,
+      "saldo_nachher": 1422.6200000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Restaurant"
+    },
+    {
+      "zeitstempel": "2027-06-14T10:00:07Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -64.86,
+      "saldo_nachher": 1357.7600000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Kleidung"
+    },
+    {
+      "zeitstempel": "2027-06-15T10:00:08Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -11.91,
+      "saldo_nachher": 1345.8500000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Einkauf"
+    },
+    {
+      "zeitstempel": "2027-06-15T10:00:10Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -160.3,
+      "saldo_nachher": 1185.5500000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Interne Ueberweisung"
+    },
+    {
+      "zeitstempel": "2027-06-16T10:00:05Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -748.3,
+      "saldo_nachher": 437.2500000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Strom"
+    },
+    {
+      "zeitstempel": "2027-06-17T10:00:08Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -162.31,
+      "saldo_nachher": 274.9400000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Kleidung"
+    },
+    {
+      "zeitstempel": "2027-06-18T10:00:01Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 834.19,
+      "saldo_nachher": 1109.1300000000026,
+      "status": "ausgefuehrt",
+      "referenz": "Nebenjob"
+    },
+    {
+      "zeitstempel": "2027-06-18T10:00:08Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -586.85,
+      "saldo_nachher": 522.2800000000026,
+      "status": "ausgefuehrt",
+      "referenz": "Kleidung"
+    },
+    {
+      "zeitstempel": "2027-06-21T10:00:08Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -289.48,
+      "saldo_nachher": 232.80000000000257,
+      "status": "ausgefuehrt",
+      "referenz": "Telefon"
+    },
+    {
+      "zeitstempel": "2027-06-24T10:00:03Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -30.98,
+      "saldo_nachher": 201.82000000000258,
+      "status": "ausgefuehrt",
+      "referenz": "Miete"
+    },
+    {
+      "zeitstempel": "2027-06-30T10:00:03Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -650.93,
+      "saldo_nachher": 201.82000000000258,
+      "status": "abgelehnt",
+      "grund": "Deckung nicht ausreichend"
+    },
+    {
+      "zeitstempel": "2027-07-01T10:00:07Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 3356,
+      "saldo_nachher": 3557.8200000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Lohnzahlung July 2027"
+    },
+    {
+      "zeitstempel": "2027-07-01T08:00:00Z",
+      "typ": "kontogebuehr",
+      "betrag": -25.0,
+      "saldo_nachher": 3532.8200000000024,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-07-01T10:00:49Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -212.1,
+      "saldo_nachher": 3320.7200000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Spende"
+    },
+    {
+      "zeitstempel": "2027-07-01T10:00:51Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -121.14,
+      "saldo_nachher": 3199.5800000000027,
+      "status": "ausgefuehrt",
+      "referenz": "Transport"
+    },
+    {
+      "zeitstempel": "2027-07-02T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -1730.28,
+      "saldo_nachher": 1469.3000000000027,
+      "status": "ausgefuehrt",
+      "referenz": "Moebel"
+    },
+    {
+      "zeitstempel": "2027-07-05T10:00:09Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 154.45,
+      "saldo_nachher": 1623.7500000000027,
+      "status": "ausgefuehrt",
+      "referenz": "Interne Ueberweisung"
+    },
+    {
+      "zeitstempel": "2027-07-05T10:00:11Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -113.09,
+      "saldo_nachher": 1510.6600000000028,
+      "status": "ausgefuehrt",
+      "referenz": "Versicherung"
+    },
+    {
+      "zeitstempel": "2027-07-05T10:00:13Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -304.23,
+      "saldo_nachher": 1206.4300000000028,
+      "status": "ausgefuehrt",
+      "referenz": "Miete"
+    },
+    {
+      "zeitstempel": "2027-07-06T10:00:07Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -513.21,
+      "saldo_nachher": 693.2200000000028,
+      "status": "ausgefuehrt",
+      "referenz": "Spende"
+    },
+    {
+      "zeitstempel": "2027-07-07T10:00:05Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -129.08,
+      "saldo_nachher": 564.1400000000027,
+      "status": "ausgefuehrt",
+      "referenz": "Spende"
+    },
+    {
+      "zeitstempel": "2027-07-12T10:00:01Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 1170.37,
+      "saldo_nachher": 1734.5100000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Verkaufserloes"
+    },
+    {
+      "zeitstempel": "2027-07-12T10:00:05Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -137.62,
+      "saldo_nachher": 1596.8900000000026,
+      "status": "ausgefuehrt",
+      "referenz": "Telefon"
+    },
+    {
+      "zeitstempel": "2027-07-12T10:00:07Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -428.41,
+      "saldo_nachher": 1168.4800000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Elektronik"
+    },
+    {
+      "zeitstempel": "2027-07-13T10:00:05Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -684.03,
+      "saldo_nachher": 484.45000000000255,
+      "status": "ausgefuehrt",
+      "referenz": "Telefon"
+    },
+    {
+      "zeitstempel": "2027-07-20T10:00:06Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -136.98,
+      "saldo_nachher": 347.4700000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Moebel"
+    },
+    {
+      "zeitstempel": "2027-07-21T10:00:01Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 430.82,
+      "saldo_nachher": 778.2900000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Nebenjob"
+    },
+    {
+      "zeitstempel": "2027-07-21T10:00:06Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -112.92,
+      "saldo_nachher": 665.3700000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Interne Ueberweisung"
+    },
+    {
+      "zeitstempel": "2027-07-22T10:00:04Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -521.94,
+      "saldo_nachher": 143.43000000000245,
+      "status": "ausgefuehrt",
+      "referenz": "Moebel"
+    },
+    {
+      "zeitstempel": "2027-07-23T10:00:01Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 729.85,
+      "saldo_nachher": 873.2800000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Gutschrift"
+    },
+    {
+      "zeitstempel": "2027-07-23T10:00:05Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -340.29,
+      "saldo_nachher": 532.9900000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Einkauf"
+    },
+    {
+      "zeitstempel": "2027-07-26T10:00:05Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -110.18,
+      "saldo_nachher": 422.8100000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Transport"
+    },
+    {
+      "zeitstempel": "2027-07-27T10:00:06Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -312.63,
+      "saldo_nachher": 110.18000000000251,
+      "status": "ausgefuehrt",
+      "referenz": "Internet"
+    },
+    {
+      "zeitstempel": "2027-07-30T10:00:03Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 870.77,
+      "saldo_nachher": 980.9500000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Praemie"
+    },
+    {
+      "zeitstempel": "2027-07-30T10:00:05Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -261.03,
+      "saldo_nachher": 719.9200000000026,
+      "status": "ausgefuehrt",
+      "referenz": "Internet"
+    },
+    {
+      "zeitstempel": "2027-08-02T10:00:07Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 3314,
+      "saldo_nachher": 4033.920000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Lohnzahlung August 2027"
+    },
+    {
+      "zeitstempel": "2027-08-03T10:00:07Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -241.07,
+      "saldo_nachher": 3792.8500000000026,
+      "status": "ausgefuehrt",
+      "referenz": "Spende"
+    },
+    {
+      "zeitstempel": "2027-08-04T10:00:01Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 1257.86,
+      "saldo_nachher": 5050.710000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Freelance-Auftrag"
+    },
+    {
+      "zeitstempel": "2027-08-04T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -787.42,
+      "saldo_nachher": 4263.290000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Geschenk"
+    },
+    {
+      "zeitstempel": "2027-08-04T10:00:11Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -178.03,
+      "saldo_nachher": 4085.2600000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Interne Ueberweisung"
+    },
+    {
+      "zeitstempel": "2027-08-05T10:00:05Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -199.65,
+      "saldo_nachher": 3885.6100000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Restaurant"
+    },
+    {
+      "zeitstempel": "2027-08-05T10:00:15Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 348.83,
+      "saldo_nachher": 4234.440000000002,
+      "status": "ausgefuehrt",
+      "referenz": "Interne Ueberweisung"
+    },
+    {
+      "zeitstempel": "2027-08-06T10:00:07Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -475.57,
+      "saldo_nachher": 3758.870000000002,
+      "status": "ausgefuehrt",
+      "referenz": "Kleidung"
+    },
+    {
+      "zeitstempel": "2027-08-09T10:00:15Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -487.68,
+      "saldo_nachher": 3271.1900000000023,
+      "status": "ausgefuehrt",
+      "referenz": "Reise"
+    },
+    {
+      "zeitstempel": "2027-08-09T10:00:17Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -1669.06,
+      "saldo_nachher": 1602.1300000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Internet"
+    },
+    {
+      "zeitstempel": "2027-08-11T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -286.17,
+      "saldo_nachher": 1315.9600000000023,
+      "status": "ausgefuehrt",
+      "referenz": "Versicherung"
+    },
+    {
+      "zeitstempel": "2027-08-11T10:00:11Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -504.9,
+      "saldo_nachher": 811.0600000000023,
+      "status": "ausgefuehrt",
+      "referenz": "Telefon"
+    },
+    {
+      "zeitstempel": "2027-08-11T10:00:19Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 337.52,
+      "saldo_nachher": 1148.5800000000022,
+      "status": "ausgefuehrt",
+      "referenz": "Interne Ueberweisung"
+    },
+    {
+      "zeitstempel": "2027-08-12T10:00:11Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -174.54,
+      "saldo_nachher": 974.0400000000022,
+      "status": "ausgefuehrt",
+      "referenz": "Fitness"
+    },
+    {
+      "zeitstempel": "2027-08-13T10:00:01Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 1359.69,
+      "saldo_nachher": 2333.7300000000023,
+      "status": "ausgefuehrt",
+      "referenz": "Nebenjob"
+    },
+    {
+      "zeitstempel": "2027-08-13T10:00:11Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -140.5,
+      "saldo_nachher": 2193.2300000000023,
+      "status": "ausgefuehrt",
+      "referenz": "Versicherung"
+    },
+    {
+      "zeitstempel": "2027-08-16T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -127.7,
+      "saldo_nachher": 2065.5300000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Moebel"
+    },
+    {
+      "zeitstempel": "2027-08-16T10:00:11Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -725.83,
+      "saldo_nachher": 1339.7000000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Zahnarzt"
+    },
+    {
+      "zeitstempel": "2027-08-17T10:00:07Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -90.19,
+      "saldo_nachher": 1249.5100000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Miete"
+    },
+    {
+      "zeitstempel": "2027-08-18T10:00:01Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 1514.99,
+      "saldo_nachher": 2764.5000000000027,
+      "status": "ausgefuehrt",
+      "referenz": "Lohnzahlung"
+    },
+    {
+      "zeitstempel": "2027-08-18T10:00:14Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -124.35,
+      "saldo_nachher": 2640.150000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Kleidung"
+    },
+    {
+      "zeitstempel": "2027-08-18T10:00:16Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -94.58,
+      "saldo_nachher": 2545.570000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Spende"
+    },
+    {
+      "zeitstempel": "2027-08-19T10:00:08Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -1144.53,
+      "saldo_nachher": 1401.040000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Restaurant"
+    },
+    {
+      "zeitstempel": "2027-08-20T10:00:01Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 504.79,
+      "saldo_nachher": 1905.8300000000029,
+      "status": "ausgefuehrt",
+      "referenz": "Gutschrift"
+    },
+    {
+      "zeitstempel": "2027-08-23T10:00:01Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 1145.33,
+      "saldo_nachher": 3051.1600000000026,
+      "status": "ausgefuehrt",
+      "referenz": "Rueckerstattung"
+    },
+    {
+      "zeitstempel": "2027-08-23T10:00:08Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -731.53,
+      "saldo_nachher": 2319.630000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Elektronik"
+    },
+    {
+      "zeitstempel": "2027-08-23T10:00:10Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -200.74,
+      "saldo_nachher": 2118.890000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Miete"
+    },
+    {
+      "zeitstempel": "2027-08-24T10:00:05Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -248.52,
+      "saldo_nachher": 1870.370000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Moebel"
+    },
+    {
+      "zeitstempel": "2027-08-24T10:00:07Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -148.97,
+      "saldo_nachher": 1721.400000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Restaurant"
+    },
+    {
+      "zeitstempel": "2027-08-24T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -99.7,
+      "saldo_nachher": 1621.700000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Interne Ueberweisung"
+    },
+    {
+      "zeitstempel": "2027-08-26T10:00:04Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -490.95,
+      "saldo_nachher": 1130.750000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Transport"
+    },
+    {
+      "zeitstempel": "2027-08-27T10:00:03Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -443.05,
+      "saldo_nachher": 687.700000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Telefon"
+    },
+    {
+      "zeitstempel": "2027-08-27T10:00:05Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -390.64,
+      "saldo_nachher": 297.060000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Restaurant"
+    },
+    {
+      "zeitstempel": "2027-08-31T10:00:01Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -335.32,
+      "saldo_nachher": 297.060000000003,
+      "status": "abgelehnt",
+      "grund": "Deckung nicht ausreichend"
+    },
+    {
+      "zeitstempel": "2027-09-01T10:00:07Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 3594,
+      "saldo_nachher": 3891.060000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Lohnzahlung September 2027"
+    },
+    {
+      "zeitstempel": "2027-09-01T10:00:25Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -148.59,
+      "saldo_nachher": 3742.470000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Einkauf"
+    },
+    {
+      "zeitstempel": "2027-09-03T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -27.58,
+      "saldo_nachher": 3714.890000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Elektronik"
+    },
+    {
+      "zeitstempel": "2027-09-03T10:00:11Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -1021.72,
+      "saldo_nachher": 2693.170000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Geschenk"
+    },
+    {
+      "zeitstempel": "2027-09-06T10:00:13Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -643.21,
+      "saldo_nachher": 2049.9600000000028,
+      "status": "ausgefuehrt",
+      "referenz": "Versicherung"
+    },
+    {
+      "zeitstempel": "2027-09-06T10:00:15Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -677.14,
+      "saldo_nachher": 1372.820000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Kleidung"
+    },
+    {
+      "zeitstempel": "2027-09-07T10:00:05Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -210.45,
+      "saldo_nachher": 1162.3700000000028,
+      "status": "ausgefuehrt",
+      "referenz": "Restaurant"
+    },
+    {
+      "zeitstempel": "2027-09-08T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -770.22,
+      "saldo_nachher": 392.1500000000028,
+      "status": "ausgefuehrt",
+      "referenz": "Spende"
+    },
+    {
+      "zeitstempel": "2027-09-10T10:00:03Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -23.71,
+      "saldo_nachher": 368.44000000000284,
+      "status": "ausgefuehrt",
+      "referenz": "Spende"
+    },
+    {
+      "zeitstempel": "2027-09-16T10:00:01Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 1800.83,
+      "saldo_nachher": 2169.2700000000027,
+      "status": "ausgefuehrt",
+      "referenz": "Verkaufserloes"
+    },
+    {
+      "zeitstempel": "2027-09-16T10:00:06Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -402.29,
+      "saldo_nachher": 1766.9800000000027,
+      "status": "ausgefuehrt",
+      "referenz": "Strom"
+    },
+    {
+      "zeitstempel": "2027-09-17T10:00:04Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -293.3,
+      "saldo_nachher": 1473.6800000000028,
+      "status": "ausgefuehrt",
+      "referenz": "Spende"
+    },
+    {
+      "zeitstempel": "2027-09-20T10:00:08Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -761.08,
+      "saldo_nachher": 712.6000000000028,
+      "status": "ausgefuehrt",
+      "referenz": "Reise"
+    },
+    {
+      "zeitstempel": "2027-09-21T10:00:04Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -388.91,
+      "saldo_nachher": 323.6900000000027,
+      "status": "ausgefuehrt",
+      "referenz": "Fitness"
+    },
+    {
+      "zeitstempel": "2027-09-22T10:00:03Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -77.83,
+      "saldo_nachher": 245.86000000000274,
+      "status": "ausgefuehrt",
+      "referenz": "Spende"
+    },
+    {
+      "zeitstempel": "2027-09-28T10:00:02Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -506.18,
+      "saldo_nachher": 245.86000000000274,
+      "status": "abgelehnt",
+      "grund": "Deckung nicht ausreichend"
+    },
+    {
+      "zeitstempel": "2027-09-29T10:00:05Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 828.11,
+      "saldo_nachher": 1073.9700000000028,
+      "status": "ausgefuehrt",
+      "referenz": "Bonus"
+    },
+    {
+      "zeitstempel": "2027-09-29T10:00:15Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -756.17,
+      "saldo_nachher": 317.8000000000028,
+      "status": "ausgefuehrt",
+      "referenz": "Transport"
+    },
+    {
+      "zeitstempel": "2027-09-30T10:00:06Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -91.91,
+      "saldo_nachher": 225.8900000000028,
+      "status": "ausgefuehrt",
+      "referenz": "Telefon"
+    },
+    {
+      "zeitstempel": "2027-09-30T10:00:08Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -765.96,
+      "saldo_nachher": 225.8900000000028,
+      "status": "abgelehnt",
+      "grund": "Deckung nicht ausreichend"
+    },
+    {
+      "zeitstempel": "2027-10-01T10:00:07Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 3475,
+      "saldo_nachher": 3700.8900000000026,
+      "status": "ausgefuehrt",
+      "referenz": "Lohnzahlung October 2027"
+    },
+    {
+      "zeitstempel": "2027-10-01T08:00:00Z",
+      "typ": "kontogebuehr",
+      "betrag": -25.0,
+      "saldo_nachher": 3675.8900000000026,
+      "status": "ausgefuehrt"
+    },
+    {
+      "zeitstempel": "2027-10-01T10:00:45Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -166.68,
+      "saldo_nachher": 3509.2100000000028,
+      "status": "ausgefuehrt",
+      "referenz": "Versicherung"
+    },
+    {
+      "zeitstempel": "2027-10-04T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -269.52,
+      "saldo_nachher": 3239.690000000003,
+      "status": "ausgefuehrt",
+      "referenz": "Elektronik"
+    },
+    {
+      "zeitstempel": "2027-10-06T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -746.96,
+      "saldo_nachher": 2492.7300000000027,
+      "status": "ausgefuehrt",
+      "referenz": "Arztrechnung"
+    },
+    {
+      "zeitstempel": "2027-10-08T10:00:07Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -153.78,
+      "saldo_nachher": 2338.9500000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Elektronik"
+    },
+    {
+      "zeitstempel": "2027-10-11T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -113.11,
+      "saldo_nachher": 2225.8400000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Transport"
+    },
+    {
+      "zeitstempel": "2027-10-12T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -532.85,
+      "saldo_nachher": 1692.9900000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Spende"
+    },
+    {
+      "zeitstempel": "2027-10-13T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -330.57,
+      "saldo_nachher": 1362.4200000000026,
+      "status": "ausgefuehrt",
+      "referenz": "Geschenk"
+    },
+    {
+      "zeitstempel": "2027-10-13T10:00:11Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -262.43,
+      "saldo_nachher": 1099.9900000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Internet"
+    },
+    {
+      "zeitstempel": "2027-10-14T10:00:07Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -780.59,
+      "saldo_nachher": 319.4000000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Miete"
+    },
+    {
+      "zeitstempel": "2027-10-15T10:00:07Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -145.76,
+      "saldo_nachher": 173.6400000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Reise"
+    },
+    {
+      "zeitstempel": "2027-10-21T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -66.25,
+      "saldo_nachher": 107.39000000000249,
+      "status": "ausgefuehrt",
+      "referenz": "Einkauf"
+    },
+    {
+      "zeitstempel": "2027-10-26T10:00:01Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 836.3,
+      "saldo_nachher": 943.6900000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Gutschrift"
+    },
+    {
+      "zeitstempel": "2027-10-26T10:00:07Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -634.9,
+      "saldo_nachher": 308.79000000000246,
+      "status": "ausgefuehrt",
+      "referenz": "Spende"
+    },
+    {
+      "zeitstempel": "2027-10-27T10:00:03Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 1170.81,
+      "saldo_nachher": 1479.6000000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Praemie"
+    },
+    {
+      "zeitstempel": "2027-10-28T10:00:07Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -495.23,
+      "saldo_nachher": 984.3700000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Moebel"
+    },
+    {
+      "zeitstempel": "2027-10-29T10:00:01Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -711.83,
+      "saldo_nachher": 272.54000000000235,
+      "status": "ausgefuehrt",
+      "referenz": "Elektronik"
+    },
+    {
+      "zeitstempel": "2027-11-01T10:00:09Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 3497,
+      "saldo_nachher": 3769.5400000000022,
+      "status": "ausgefuehrt",
+      "referenz": "Lohnzahlung November 2027"
+    },
+    {
+      "zeitstempel": "2027-11-01T10:00:25Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -468.69,
+      "saldo_nachher": 3300.850000000002,
+      "status": "ausgefuehrt",
+      "referenz": "Abo"
+    },
+    {
+      "zeitstempel": "2027-11-02T10:00:03Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 937.54,
+      "saldo_nachher": 4238.390000000002,
+      "status": "ausgefuehrt",
+      "referenz": "Praemie"
+    },
+    {
+      "zeitstempel": "2027-11-02T10:00:11Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -765.05,
+      "saldo_nachher": 3473.340000000002,
+      "status": "ausgefuehrt",
+      "referenz": "Spende"
+    },
+    {
+      "zeitstempel": "2027-11-03T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -521.6,
+      "saldo_nachher": 2951.740000000002,
+      "status": "ausgefuehrt",
+      "referenz": "Internet"
+    },
+    {
+      "zeitstempel": "2027-11-04T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -303.09,
+      "saldo_nachher": 2648.650000000002,
+      "status": "ausgefuehrt",
+      "referenz": "Reise"
+    },
+    {
+      "zeitstempel": "2027-11-04T10:00:11Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -326.51,
+      "saldo_nachher": 2322.140000000002,
+      "status": "ausgefuehrt",
+      "referenz": "Transport"
+    },
+    {
+      "zeitstempel": "2027-11-05T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -527.57,
+      "saldo_nachher": 1794.570000000002,
+      "status": "ausgefuehrt",
+      "referenz": "Reise"
+    },
+    {
+      "zeitstempel": "2027-11-08T10:00:07Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -226.39,
+      "saldo_nachher": 1568.180000000002,
+      "status": "ausgefuehrt",
+      "referenz": "Telefon"
+    },
+    {
+      "zeitstempel": "2027-11-09T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -558.46,
+      "saldo_nachher": 1009.7200000000021,
+      "status": "ausgefuehrt",
+      "referenz": "Moebel"
+    },
+    {
+      "zeitstempel": "2027-11-10T10:00:11Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -370.28,
+      "saldo_nachher": 639.4400000000021,
+      "status": "ausgefuehrt",
+      "referenz": "Abo"
+    },
+    {
+      "zeitstempel": "2027-11-10T10:00:13Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -346.3,
+      "saldo_nachher": 293.1400000000021,
+      "status": "ausgefuehrt",
+      "referenz": "Moebel"
+    },
+    {
+      "zeitstempel": "2027-11-12T10:00:05Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -382.28,
+      "saldo_nachher": 293.1400000000021,
+      "status": "abgelehnt",
+      "grund": "Deckung nicht ausreichend"
+    },
+    {
+      "zeitstempel": "2027-11-12T10:00:06Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -687.92,
+      "saldo_nachher": 293.1400000000021,
+      "status": "abgelehnt",
+      "grund": "Deckung nicht ausreichend"
+    },
+    {
+      "zeitstempel": "2027-11-16T10:00:03Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -254.5,
+      "saldo_nachher": 38.64000000000209,
+      "status": "ausgefuehrt",
+      "referenz": "Kleidung"
+    },
+    {
+      "zeitstempel": "2027-11-26T10:00:03Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 1080.3,
+      "saldo_nachher": 1118.940000000002,
+      "status": "ausgefuehrt",
+      "referenz": "Mieteinnahme"
+    },
+    {
+      "zeitstempel": "2027-11-26T10:00:11Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -672.38,
+      "saldo_nachher": 446.5600000000021,
+      "status": "ausgefuehrt",
+      "referenz": "Strom"
+    },
+    {
+      "zeitstempel": "2027-11-30T10:00:04Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -79.84,
+      "saldo_nachher": 366.7200000000021,
+      "status": "ausgefuehrt",
+      "referenz": "Reise"
+    },
+    {
+      "zeitstempel": "2027-12-01T10:00:07Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 3677,
+      "saldo_nachher": 4043.720000000002,
+      "status": "ausgefuehrt",
+      "referenz": "Lohnzahlung December 2027"
+    },
+    {
+      "zeitstempel": "2027-12-01T10:00:23Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -581.34,
+      "saldo_nachher": 3462.380000000002,
+      "status": "ausgefuehrt",
+      "referenz": "Fitness"
+    },
+    {
+      "zeitstempel": "2027-12-02T10:00:05Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 204.86,
+      "saldo_nachher": 3667.240000000002,
+      "status": "ausgefuehrt",
+      "referenz": "Interne Ueberweisung"
+    },
+    {
+      "zeitstempel": "2027-12-06T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -547.72,
+      "saldo_nachher": 3119.5200000000023,
+      "status": "ausgefuehrt",
+      "referenz": "Telefon"
+    },
+    {
+      "zeitstempel": "2027-12-06T10:00:11Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -70.06,
+      "saldo_nachher": 3049.4600000000023,
+      "status": "ausgefuehrt",
+      "referenz": "Abo"
+    },
+    {
+      "zeitstempel": "2027-12-07T10:00:13Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -580.68,
+      "saldo_nachher": 2468.7800000000025,
+      "status": "ausgefuehrt",
+      "referenz": "Abo"
+    },
+    {
+      "zeitstempel": "2027-12-07T10:00:15Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -795.21,
+      "saldo_nachher": 1673.5700000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Transport"
+    },
+    {
+      "zeitstempel": "2027-12-08T10:00:13Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -714.97,
+      "saldo_nachher": 958.6000000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Versicherung"
+    },
+    {
+      "zeitstempel": "2027-12-09T10:00:11Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -77.26,
+      "saldo_nachher": 881.3400000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Versicherung"
+    },
+    {
+      "zeitstempel": "2027-12-10T10:00:09Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -503.17,
+      "saldo_nachher": 378.1700000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Arztrechnung"
+    },
+    {
+      "zeitstempel": "2027-12-21T10:00:03Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -118.76,
+      "saldo_nachher": 259.4100000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Telefon"
+    },
+    {
+      "zeitstempel": "2027-12-22T10:00:01Z",
+      "typ": "ueberweisung_ein",
+      "betrag": 622.68,
+      "saldo_nachher": 882.0900000000024,
+      "status": "ausgefuehrt",
+      "referenz": "Praemie"
+    },
+    {
+      "zeitstempel": "2027-12-22T10:00:03Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -386.02,
+      "saldo_nachher": 496.07000000000244,
+      "status": "ausgefuehrt",
+      "referenz": "Zahnarzt"
+    },
+    {
+      "zeitstempel": "2027-12-23T10:00:03Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -513.31,
+      "saldo_nachher": 496.07000000000244,
+      "status": "abgelehnt",
+      "grund": "Deckung nicht ausreichend"
+    },
+    {
+      "zeitstempel": "2027-12-28T10:00:05Z",
+      "typ": "ueberweisung_aus",
+      "betrag": -347.39,
+      "saldo_nachher": 148.68000000000245,
+      "status": "ausgefuehrt",
+      "referenz": "Fitness"
     }
   ]
 }
