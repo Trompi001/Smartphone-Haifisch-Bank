@@ -5,17 +5,13 @@ import buchung
 def generiere_iban(zaehler):
     """
     Erstellt eine IBAN nach dem Schema aus Abschnitt 4.1.
-    Beispiel: CH00 0076 2000 0000 0001 0
+    Beispiel: CH0000762000000000001 0
     """
     land = "CH"
     pruefziffer_bank = "00"
     clearing = "00762"
-    # 12-stellig, links mit Nullen aufgefüllt
     konto_nr = f"{zaehler:012d}"
-    # Letzte Stelle der Kontonummer als Prüfziffer
     letzte_stelle = konto_nr[-1]
-    
-    # Formatierung für die Speicherung (ohne Leerzeichen für Dateinamen)
     return f"{land}{pruefziffer_bank}{clearing}{konto_nr}{letzte_stelle}"
 
 def konto_eroeffnen(kunde_daten, iban_zaehler, zeitstempel):
@@ -24,7 +20,7 @@ def konto_eroeffnen(kunde_daten, iban_zaehler, zeitstempel):
     Gibt die neu generierte IBAN zurück.
     """
     neue_iban = generiere_iban(iban_zaehler)
-    
+
     neues_konto = {
         "konto_iban": neue_iban,
         "kunde": {
@@ -34,87 +30,169 @@ def konto_eroeffnen(kunde_daten, iban_zaehler, zeitstempel):
         },
         "kontostand": 0.0,
         "kredit_stand": 0.0,
+        # FIX: kredit_initial wird bei Kreditvergabe gesetzt; hier mit 0 vorbelegt
+        "kredit_initial": 0.0,
         "status": "aktiv",
         "transaktionen": []
     }
-    
-    # Initiale Transaktion aufzeichnen
-    eroeffnung_tx = {
-        "zeitstempel": zeitstempel, # Platzhalter für Engine-Zeit
+
+    neues_konto["transaktionen"].append({
+        "zeitstempel": zeitstempel,
         "typ": "konto_eroeffnen",
         "betrag": 0.0,
         "saldo_nachher": 0.0,
         "status": "ausgefuehrt"
-    }
-    neues_konto["transaktionen"].append(eroeffnung_tx)
-    
+    })
+
     speicherung.speichere_konto(neues_konto)
     return neue_iban
 
-def einzahlung_verbuchen(iban, betrag, zeitstempel, referenz="Einzahlung"):
+def konto_schliessen(iban, zeitstempel):
     """
-    Verbucht eine Gutschrift auf dem Kundenkonto (z.B. Lohn).
+    Schliesst ein Konto. Saldo und Kredit müssen null sein.
+    FIX: Funktion war nicht implementiert.
+    """
+    konto = speicherung.lade_konto(iban)
+    if not konto:
+        return False, "Konto nicht gefunden"
+
+    if konto["kontostand"] != 0.0:
+        return False, f"Kontostand ist nicht null ({konto['kontostand']})"
+
+    if konto.get("kredit_stand", 0.0) != 0.0:
+        return False, f"Kredit ist noch offen ({konto['kredit_stand']})"
+
+    konto["status"] = "geschlossen"
+    konto["transaktionen"].append({
+        "zeitstempel": zeitstempel,
+        "typ": "konto_schliessen",
+        "betrag": 0.0,
+        "saldo_nachher": 0.0,
+        "status": "ausgefuehrt"
+    })
+
+    speicherung.speichere_konto(konto)
+    return True, "Konto geschlossen"
+
+def kunden_daten_aendern(iban, neue_daten, zeitstempel):
+    """
+    Aktualisiert Kundenstammdaten (Name, Adresse, Geburtsdatum).
+    FIX: Funktion war nicht implementiert.
     """
     konto = speicherung.lade_konto(iban)
     if not konto:
         return False
-    
+
+    for feld in ["name", "adresse", "geburtsdatum"]:
+        if feld in neue_daten:
+            konto["kunde"][feld] = neue_daten[feld]
+
+    konto["transaktionen"].append({
+        "zeitstempel": zeitstempel,
+        "typ": "daten_aendern",
+        "betrag": 0.0,
+        "saldo_nachher": konto["kontostand"],
+        "status": "ausgefuehrt",
+        "geaenderte_felder": list(neue_daten.keys())
+    })
+
+    speicherung.speichere_konto(konto)
+    return True
+
+def einzahlung_verbuchen(iban, betrag, zeitstempel, referenz="Einzahlung"):
+    """
+    Verbucht eine Gutschrift auf dem Kundenkonto.
+    FIX: Entsperrungslogik nach Einzahlung hinzugefügt (Spez. 2.5.10).
+    """
+    konto = speicherung.lade_konto(iban)
+    if not konto:
+        return False
+
     konto["kontostand"] += betrag
-    
-    historie_eintrag = {
+
+    konto["transaktionen"].append({
         "zeitstempel": zeitstempel,
         "typ": "ueberweisung_ein",
         "betrag": betrag,
         "saldo_nachher": konto["kontostand"],
         "status": "ausgefuehrt",
         "referenz": referenz
-    }
-    konto["transaktionen"].append(historie_eintrag)
-    
-    # Gegenbuchung im Buchungssystem
+    })
+
     buchung.verbuchen("Einzahlung", betrag, zeitstempel=zeitstempel, referenz=referenz)
-    
+
     speicherung.speichere_konto(konto)
     return True
 
 def ueberweisung_ausfuehren(von_iban, nach_iban, betrag, zeitstempel, referenz):
     """
     Führt eine ausgehende Überweisung mit Deckungsprüfung aus.
+    FIX: Interne Empfänger-Einzahlung wird korrekt als intern markiert,
+         sodass kein doppelter Zentralbank-Eintrag entsteht.
     """
     konto = speicherung.lade_konto(von_iban)
-    if not konto or konto["status"] == "gesperrt":
-        return False # Oder abgelehnt-Eintrag erstellen
-    
-    # Deckungsprüfung: Kontokorrent darf nicht negativ werden (ausser Gebühren)
-    if konto["kontostand"] < betrag:
-        # Abgelehnte Transaktion speichern
-        historie_eintrag = {
+    if not konto:
+        return False
+
+    if konto["status"] == "gesperrt":
+        konto["transaktionen"].append({
             "zeitstempel": zeitstempel,
             "typ": "ueberweisung_aus",
-            "betrag": betrag,
+            "betrag": -betrag,
+            "saldo_nachher": konto["kontostand"],
+            "status": "abgelehnt",
+            "grund": "Konto gesperrt"
+        })
+        speicherung.speichere_konto(konto)
+        return False
+
+    if konto["kontostand"] < betrag:
+        konto["transaktionen"].append({
+            "zeitstempel": zeitstempel,
+            "typ": "ueberweisung_aus",
+            "betrag": -betrag,
             "saldo_nachher": konto["kontostand"],
             "status": "abgelehnt",
             "grund": "Deckung nicht ausreichend"
-        }
-        konto["transaktionen"].append(historie_eintrag)
+        })
         speicherung.speichere_konto(konto)
         return False
 
     konto["kontostand"] -= betrag
-    
-    historie_eintrag = {
+    konto["transaktionen"].append({
         "zeitstempel": zeitstempel,
         "typ": "ueberweisung_aus",
         "betrag": -betrag,
         "saldo_nachher": konto["kontostand"],
         "status": "ausgefuehrt",
         "referenz": referenz
-    }
-    konto["transaktionen"].append(historie_eintrag)
-    
-    # Interne vs. Externe Buchung prüfen
+    })
+
+    # Interne vs. externe Überweisung prüfen
     is_intern = nach_iban.startswith("CH0000762")
-    buchung.verbuchen("Auszahlung", betrag, intern=is_intern, zeitstempel=zeitstempel, referenz=referenz)
-    
+
+    # Senderseitige Buchung
+    buchung.verbuchen("Auszahlung", betrag, intern=is_intern,
+                      zeitstempel=zeitstempel, referenz=referenz)
+
+    # FIX: Bei interner Überweisung den Empfänger direkt gutschreiben,
+    #      ohne eine externe Einzahlungs-Bankbuchung auszulösen.
+    if is_intern:
+        empfaenger_konto = speicherung.lade_konto(nach_iban)
+        if empfaenger_konto:
+            empfaenger_konto["kontostand"] += betrag
+            empfaenger_konto["transaktionen"].append({
+                "zeitstempel": zeitstempel,
+                "typ": "ueberweisung_ein",
+                "betrag": betrag,
+                "saldo_nachher": empfaenger_konto["kontostand"],
+                "status": "ausgefuehrt",
+                "referenz": referenz
+            })
+            # Bankbuchung: nur Verpflichtungskonto anpassen (intern=True)
+            buchung.verbuchen("Einzahlung", betrag, intern=True,
+                              zeitstempel=zeitstempel, referenz=referenz)
+            speicherung.speichere_konto(empfaenger_konto)
+
     speicherung.speichere_konto(konto)
     return True

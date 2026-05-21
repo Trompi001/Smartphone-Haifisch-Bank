@@ -1,16 +1,15 @@
 from datetime import datetime
 import speicherung
 
-# Pfad zur zentralen Bankbilanz
 BANK_STATUS_FILE = "bankkonten.json"
 
 def initialisiere_bank():
     """Erstellt die initialen Bankkonten, falls noch nicht vorhanden."""
     status = {
-        "zentralbankkonto": 0.0,    # Aktiva
-        "verpflichtungskonto": 0.0, # Passiva (Kundenguthaben)
-        "kreditkonto_aktiva": 0.0,  # Aktiva (Ausstehende Kredite)
-        "einnahmenkonto": 0.0,      # G&V (Gewinn/Verlust)
+        "zentralbankkonto": 0.0,
+        "verpflichtungskonto": 0.0,
+        "kreditkonto_aktiva": 0.0,
+        "einnahmenkonto": 0.0,
         "buchungen": []
     }
     speicherung.speichere_json(BANK_STATUS_FILE, status)
@@ -19,78 +18,83 @@ def initialisiere_bank():
 def verbuchen(vorgang, betrag, intern=False, zeitstempel=None, referenz=None):
     """
     Aktualisiert die internen Bankkonten basierend auf Tabelle 3.
+    FIX: intern=True verhindert Zentralbankbuchung bei internen Überweisungen.
     """
+    if intern and vorgang in {"Einzahlung", "Auszahlung"}:
+        return
+
     bank = speicherung.lade_json(BANK_STATUS_FILE)
     if not bank:
         bank = initialisiere_bank()
-        
-    soll_konto = None
-    haben_konto = None
+
     if not zeitstempel:
         zeitstempel = datetime.now().isoformat() + "Z"
 
+    soll_konto = None
+    haben_konto = None
+
     if vorgang == "Einzahlung":
-        # Zentralbank + / Verpflichtung +
-        bank["zentralbankkonto"] += betrag
-        bank["verpflichtungskonto"] += betrag
-        soll_konto = "zentralbankkonto"
-        haben_konto = "verpflichtungskonto"
+        # FIX: Bei interner Überweisung (Empfänger) kein Zentralbankkonto berühren
+        if not intern:
+            bank["zentralbankkonto"] += betrag
+            bank["verpflichtungskonto"] += betrag
+            soll_konto = "zentralbankkonto"
+            haben_konto = "verpflichtungskonto"
+        else:
+            # Interne Einzahlung: nur Verpflichtungskonto ändert sich (Sender hat bereits abgezogen)
+            bank["verpflichtungskonto"] += betrag
+            soll_konto = "intern_eingang"
+            haben_konto = "verpflichtungskonto"
 
     elif vorgang == "Auszahlung":
         if not intern:
-            # Verpflichtung - / Zentralbank - (Achtung: Minus auf Passiv = Soll, Minus auf Aktiv = Haben)
             bank["verpflichtungskonto"] -= betrag
             bank["zentralbankkonto"] -= betrag
             soll_konto = "verpflichtungskonto"
             haben_konto = "zentralbankkonto"
         else:
-            # Interne Überweisung: Keine Buchung auf Zentralbankkonto
-            pass
+            # Interne Überweisung Sender: nur Verpflichtungskonto sinkt
+            bank["verpflichtungskonto"] -= betrag
+            soll_konto = "verpflichtungskonto"
+            haben_konto = "intern_ausgang"
 
     elif vorgang == "Kreditauszahlung":
-        # Kreditkonto + / Verpflichtung +
         bank["kreditkonto_aktiva"] += betrag
         bank["verpflichtungskonto"] += betrag
         soll_konto = "kreditkonto_aktiva"
         haben_konto = "verpflichtungskonto"
 
     elif vorgang == "Kreditgebuehr":
-        # Verpflichtung - / Einnahmen +
         bank["verpflichtungskonto"] -= betrag
         bank["einnahmenkonto"] += betrag
         soll_konto = "verpflichtungskonto"
         haben_konto = "einnahmenkonto"
 
-    elif vorgang == "Kredittilgung":
-        # Verpflichtung - / Kreditkonto -
+    elif vorgang in {"Kredittilgung", "Kreditrueckzahlung"}:
         bank["verpflichtungskonto"] -= betrag
         bank["kreditkonto_aktiva"] -= betrag
         soll_konto = "verpflichtungskonto"
         haben_konto = "kreditkonto_aktiva"
 
     elif vorgang == "Kreditzinsen":
-        # Verpflichtung - / Einnahmen +
         bank["verpflichtungskonto"] -= betrag
         bank["einnahmenkonto"] += betrag
         soll_konto = "verpflichtungskonto"
         haben_konto = "einnahmenkonto"
 
     elif vorgang == "Strafzinsen":
-        # Kreditkonto + / Einnahmen +
         bank["kreditkonto_aktiva"] += betrag
         bank["einnahmenkonto"] += betrag
         soll_konto = "kreditkonto_aktiva"
         haben_konto = "einnahmenkonto"
 
     elif vorgang == "Kontogebuehr":
-        # Verpflichtung - / Einnahmen +
         bank["verpflichtungskonto"] -= betrag
         bank["einnahmenkonto"] += betrag
         soll_konto = "verpflichtungskonto"
         haben_konto = "einnahmenkonto"
 
     elif vorgang == "Abschreibung":
-        # Einnahmen - / Kreditkonto -
         bank["einnahmenkonto"] -= betrag
         bank["kreditkonto_aktiva"] -= betrag
         soll_konto = "einnahmenkonto"
@@ -113,10 +117,9 @@ def verbuchen(vorgang, betrag, intern=False, zeitstempel=None, referenz=None):
     bilanz_pruefen(bank)
 
 def bilanz_pruefen(bank):
-    """Validiert die Bilanzgleichung: Aktiva = Passiva."""
+    """Validiert die Bilanzgleichung: Aktiva = Passiva + G&V."""
     aktiva = round(bank["zentralbankkonto"] + bank["kreditkonto_aktiva"], 2)
     passiva_erfolg = round(bank["verpflichtungskonto"] + bank["einnahmenkonto"], 2)
-    
     if aktiva != passiva_erfolg:
         print(f"WARNUNG: Bilanzungleichgewicht! Aktiva: {aktiva}, Passiva/G&V: {passiva_erfolg}")
         return False
