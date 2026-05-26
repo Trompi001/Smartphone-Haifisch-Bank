@@ -4,10 +4,10 @@ Willkommen im Repository der **Smartphone-Haifisch-Bank**. Dieses Projekt simuli
 
 ## Architektur & Modulübersicht
 
-Die Anwendung ist modular aufgebaut und folgt einem **strikt funktionalen Ansatz** (keine Klassen, keine objektorientierte Programmierung gemäß den Vorgaben). Die Datenhaltung basiert vollständig auf verschachtelten Python-Dictionaries und Listen. Die Separation of Concerns wird durch folgende Skripte und Funktionen umgesetzt:
+Die Anwendung ist modular aufgebaut und folgt einem **strikt funktionalen Ansatz** (keine Klassen, keine objektorientierte Programmierung gemäss den Vorgaben). Die Datenhaltung basiert vollständig auf verschachtelten Python-Dictionaries und Listen. Die Separation of Concerns wird durch folgende Skripte und Funktionen umgesetzt:
 
 - **`engine.py` (Steuerung & Batch-Verarbeitung):**  
-  Die Kernschleife der Simulation. Hier werden eingehende Transaktions-Batches verarbeitet. Sie sorgt für die korrekte Reihenfolge der Buchungen gemäß Spezifikation (Abschnitt 2.7): 1. Kontoeröffnungen -> 2. Einzahlungen -> 3. Periodische Verarbeitungen -> 4. Kreditanträge und -rückzahlungen -> 5. Datenänderungen und -schließungen -> 6. Auszahlungen.
+  Die Kernschleife der Simulation. Hier werden eingehende Transaktions-Batches verarbeitet. Sie sorgt für die korrekte Reihenfolge der Buchungen gemäss Spezifikation (Abschnitt 2.7): 1. Kontoeröffnungen -> 2. Einzahlungen -> 3. Periodische Verarbeitungen -> 4. Kreditanträge und -rückzahlungen -> 5. Datenänderungen und -schliessungen -> 6. Auszahlungen.
 
 - **`konten.py` (Kundenverwaltung):**  
   Zuständig für das operative Endkundengeschäft. Hier werden IBANs generiert, Konten eröffnet/geschlossen, Kundendaten geändert sowie klassische Ein- und Auszahlungen (inklusive Überweisungen zwischen Kunden) geprüft und ausgeführt.
